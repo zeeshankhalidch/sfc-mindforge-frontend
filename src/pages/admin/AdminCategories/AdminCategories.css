@@ -1,96 +1,123 @@
 .admin-category-form {
-    display: flex;
-    margin-bottom: 15px;
-    gap: 9px;
-  }
-  
-  .admin-category-form input,
-  .admin-category-form select {
-    height: 40px;
-    padding: 0 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-  }
-  
-  .admin-category-form input {
-    flex: 1;
-  }
-  
-  .admin-category-form button {
-    display: flex;
-    padding: 0 14px;
-    align-items: center;
-    gap: 6px;
-    color: #fff;
-    background-color: var(--primary);
-    border: none;
-    border-radius: 6px;
-  }
-  
-  .admin-category-list {
-    background-color: #fff;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-  }
-  
-  .admin-category-list > div {
-    display: grid;
-    grid-template-columns: 1fr 120px 40px;
-    padding: 13px 16px;
-    align-items: center;
-    border-bottom: 1px solid var(--border-color);
-    font-size: 0.75rem;
-  }
-  
-  .admin-category-list > div:last-child {
-    border-bottom: none;
-  }
-  
-  .admin-category-list small {
-    color: var(--text-muted);
-  }
-  
-  .admin-category-list button {
-    color: var(--danger);
-    background: none;
-    border: none;
-  }
+  display: flex;
+  margin-bottom: 20px;
+  padding: 16px;
+  gap: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ede8dd;
+  border-radius: 12px;
+}
 
-  .admin-category-form button[type="submit"] {
-  background: #7f1d3a;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
+.admin-category-form input,
+.admin-category-form select {
+  height: 44px;
+  padding: 0 14px;
+  background-color: #ffffff;
+  border: 1px solid #ede8dd;
   border-radius: 8px;
-  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  outline: none;
+}
+
+.admin-category-form input {
+  flex: 1;
+}
+
+.admin-category-form input::placeholder {
+  color: #a8a29e;
+}
+
+.admin-category-form input:focus,
+.admin-category-form select:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+.admin-category-form button {
+  display: inline-flex;
+  padding: 0 22px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 44px;
+  color: #0a0a0a;
+  background-color: #d4af37;
+  border: none;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-category-form button:hover {
+  background-color: #b8941f;
+}
+
+.admin-category-list {
+  background-color: #ffffff;
+  border: 1px solid #ede8dd;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.admin-category-list > div {
+  display: grid;
+  grid-template-columns: 1fr 120px 80px 80px;
+  padding: 16px 20px;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #ede8dd;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.admin-category-list > div:last-child {
+  border-bottom: none;
+}
+
+.admin-category-list span {
+  color: #1a1a1a;
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+}
+
+.admin-category-list small {
+  color: #737373;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.admin-category-list button {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-}
-
-.admin-category-form button[type="submit"]:hover {
-  background: #5c1429;
-}
-
-/* Toggle (Power) button */
-.admin-category-list button {
+  justify-content: center;
+  padding: 8px;
   background: transparent;
-  border: none;
+  border: 1px solid #ede8dd;
+  border-radius: 6px;
+  color: #0a0a0a;
   cursor: pointer;
-  padding: 6px;
-  color: #7f1d3a;
-  transition: color 0.2s;
+  transition: all 0.2s ease;
 }
 
 .admin-category-list button:hover {
-  color: #5c1429;
+  background: #0a0a0a;
+  color: #d4af37;
+  border-color: #0a0a0a;
 }
 
 .admin-category-list button:last-child {
   color: #dc2626;
+  border-color: #fecaca;
 }
 
 .admin-category-list button:last-child:hover {
-  color: #991b1b;
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
 }

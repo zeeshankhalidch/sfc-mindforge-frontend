@@ -1,9 +1,9 @@
 .ann-form {
-  background: #ffffff;
-  border-radius: 12px;
   padding: 20px;
   margin-bottom: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  border: 1px solid #ede8dd;
+  border-radius: 12px;
 }
 
 .ann-form-row {
@@ -13,73 +13,90 @@
 }
 
 .ann-form-row select {
-  min-width: 160px;
-  padding: 10px 12px;
-  border: 1px solid #ddd;
+  min-width: 180px;
+  padding: 12px 14px;
+  background-color: #ffffff;
+  border: 1px solid #ede8dd;
   border-radius: 8px;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
-  font-family: inherit;
+  color: #1a1a1a;
+  outline: none;
 }
 
 .ann-form-row input {
   flex: 1;
-  padding: 10px 12px;
-  border: 1px solid #ddd;
+  padding: 12px 14px;
+  background-color: #ffffff;
+  border: 1px solid #ede8dd;
   border-radius: 8px;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
-  font-family: inherit;
+  color: #1a1a1a;
+  outline: none;
 }
 
 .ann-form textarea {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
+  padding: 14px;
+  background-color: #ffffff;
+  border: 1px solid #ede8dd;
   border-radius: 8px;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
-  font-family: inherit;
+  color: #1a1a1a;
   resize: vertical;
   margin-bottom: 12px;
   box-sizing: border-box;
+  outline: none;
 }
 
-.ann-form input:focus,
-.ann-form select:focus,
+.ann-form-row select:focus,
+.ann-form-row input:focus,
 .ann-form textarea:focus {
-  outline: none;
-  border-color: #7f1d3a;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+.ann-form input::placeholder,
+.ann-form textarea::placeholder {
+  color: #a8a29e;
 }
 
 .ann-form button[type="submit"] {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: #7f1d3a;
-  color: #ffffff;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #d4af37;
+  color: #0a0a0a;
   border: none;
-  padding: 10px 20px;
   border-radius: 8px;
-  font-weight: 600;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
-  font-family: inherit;
+  font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.2s ease;
 }
 
 .ann-form button[type="submit"]:hover:not(:disabled) {
-  background: #5c1429;
+  background-color: #b8941f;
 }
 
 .ann-form button[type="submit"]:disabled {
-  opacity: 0.7;
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
 .ann-empty {
-  padding: 40px 20px;
+  padding: 48px 20px;
   text-align: center;
-  color: #888;
-  background: #ffffff;
+  color: #737373;
+  background-color: #ffffff;
+  border: 1px solid #ede8dd;
   border-radius: 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
 }
 
 .ann-list {
@@ -89,11 +106,11 @@
 }
 
 .ann-item {
-  background: #ffffff;
-  border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  border-left: 4px solid #7f1d3a;
+  background-color: #ffffff;
+  border: 1px solid #ede8dd;
+  border-left: 4px solid #d4af37;
+  border-radius: 12px;
 }
 
 .ann-item-header {
@@ -101,21 +118,22 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .ann-item-title {
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: #7f1d3a;
+  gap: 10px;
+  color: #d4af37;
 }
 
 .ann-item-title h3 {
   margin: 0;
+  font-family: "Archivo", sans-serif;
   font-size: 16px;
-  color: #1f2937;
   font-weight: 700;
+  color: #1a1a1a;
 }
 
 .ann-item-actions {
@@ -125,85 +143,93 @@
 }
 
 .ann-type {
+  font-family: "Inter", sans-serif;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: 20px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
 }
 
 .ann-type-general {
-  background: #e0e7ff;
-  color: #3730a3;
+  background-color: #fef9e7;
+  color: #b8941f;
 }
 
 .ann-type-info {
-  background: #dbeafe;
+  background-color: #dbeafe;
   color: #1e40af;
 }
 
 .ann-type-warning {
-  background: #fef3c7;
+  background-color: #fef3c7;
   color: #92400e;
 }
 
 .ann-type-update {
-  background: #dcfce7;
+  background-color: #dcfce7;
   color: #166534;
 }
 
 .ann-btn-toggle,
 .ann-btn-delete {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 6px;
-  border-radius: 6px;
-  transition: background 0.2s;
   display: flex;
   align-items: center;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid #ede8dd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .ann-btn-toggle {
-  color: #7f1d3a;
+  color: #d4af37;
 }
 
 .ann-btn-toggle:hover {
-  background: #f5e6ea;
+  background-color: #d4af37;
+  color: #0a0a0a;
+  border-color: #d4af37;
 }
 
 .ann-btn-delete {
   color: #dc2626;
+  border-color: #fecaca;
 }
 
 .ann-btn-delete:hover {
-  background: #fee2e2;
+  background-color: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
 }
 
 .ann-item p {
-  margin: 0 0 12px 0;
-  color: #555;
+  margin: 0 0 14px 0;
+  color: #525252;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .ann-item-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 12px;
+  font-family: "Inter", sans-serif;
   font-size: 12px;
-  color: #888;
-  padding-top: 10px;
-  border-top: 1px solid #f0f0f0;
+  color: #a8a29e;
+  border-top: 1px solid #f5f1ea;
 }
 
 .ann-active {
   color: #16a34a;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .ann-inactive {
   color: #dc2626;
-  font-weight: 600;
+  font-weight: 700;
 }

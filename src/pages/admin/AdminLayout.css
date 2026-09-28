@@ -13,7 +13,7 @@
   height: 100vh;
   flex-direction: column;
   color: #e5e5e5;
-  background-color: #0f0f0f;
+  background-color: #0a0a0a;
   border-right: 1px solid #1f1f1f;
 }
 
@@ -38,7 +38,7 @@
   height: 38px;
   align-items: center;
   justify-content: center;
-  color: #0f0f0f;
+  color: #0a0a0a;
   background-color: #d4af37;
   font-size: 14px;
   font-weight: 800;
@@ -111,7 +111,7 @@
 }
 
 .admin-sidebar nav::-webkit-scrollbar-track {
-  background: #0f0f0f;
+  background: #0a0a0a;
 }
 
 .admin-sidebar nav::-webkit-scrollbar-thumb {
@@ -139,13 +139,13 @@
 }
 
 .admin-sidebar nav a.active {
-  color: #0f0f0f;
+  color: #0a0a0a;
   background-color: #d4af37;
   font-weight: 600;
 }
 
 .admin-sidebar nav a.active svg {
-  color: #0f0f0f;
+  color: #0a0a0a;
 }
 
 .admin-sidebar-footer {
@@ -179,12 +179,12 @@
 
 .admin-logout:hover {
   background: #d4af37;
-  color: #0f0f0f;
+  color: #0a0a0a;
   border-color: #d4af37;
 }
 
 .admin-logout:hover svg {
-  color: #0f0f0f;
+  color: #0a0a0a;
 }
 
 .admin-logout:active {
@@ -229,7 +229,7 @@
   justify-content: center;
   width: 30px;
   height: 30px;
-  color: #0f0f0f;
+  color: #0a0a0a;
   background: #d4af37;
   font-size: 12px;
   font-weight: 800;
