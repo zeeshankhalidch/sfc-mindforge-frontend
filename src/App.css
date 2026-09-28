@@ -1323,7 +1323,7 @@ body.dark-mode .admin-content {
   background-color: #0a0a0a !important;
 }
 
-body.dark-mode .page-heading,
+/* body.dark-mode .page-heading,
 body.dark-mode .transactions-page,
 body.dark-mode .dashboard-page,
 body.dark-mode .notifications-page,
@@ -1336,7 +1336,7 @@ body.dark-mode .profile-page,
 body.dark-mode .admin-dashboard-page {
   background-color: #0a0a0a !important;
   min-height: 100vh;
-}
+} */
 
 html,
 body,
