@@ -8,7 +8,6 @@ import {
   TrendingUp,
   Sparkles,
   Loader2,
-  RefreshCw,
   Trash2,
 } from "lucide-react";
 import toast from "react-hot-toast";
@@ -47,7 +46,6 @@ function Insights() {
     }
   };
 
-  // ✅ AI INSIGHT GENERATE
   const generateInsight = async () => {
     try {
       setGenerating(true);
@@ -55,7 +53,6 @@ function Insights() {
 
       toast.success("Insight generated!");
 
-      // Nayi insight list mein add karo (top pe)
       const newInsight = res.data.insight;
       setInsights((curr) => {
         const filtered = curr.filter((i) => i.month !== newInsight.month);
@@ -105,24 +102,9 @@ function Insights() {
 
         <button
           type="button"
+          className="insights-generate-btn"
           onClick={generateInsight}
           disabled={generating}
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 8,
-            background: "#7f1d3a",
-            color: "#ffffff",
-            border: "none",
-            padding: "10px 20px",
-            borderRadius: 8,
-            fontWeight: 600,
-            fontSize: 14,
-            fontFamily: "inherit",
-            cursor: generating ? "not-allowed" : "pointer",
-            opacity: generating ? 0.7 : 1,
-            transition: "background 0.2s",
-          }}
         >
           {generating ? (
             <>
@@ -146,39 +128,32 @@ function Insights() {
       </div>
 
       {loading ? (
-        <p style={{ padding: "20px", color: "#888" }}>Loading insights...</p>
+        <p className="insights-loading">Loading insights...</p>
       ) : insights.length === 0 ? (
-        <div
-          style={{
-            padding: "60px 20px",
-            textAlign: "center",
-            color: "#888",
-            background: "#ffffff",
-            borderRadius: 12,
-            boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
-          }}
-        >
-          <Sparkles size={40} style={{ color: "#d1d5db", marginBottom: 12 }} />
-          <h3 style={{ color: "#6b7280", marginBottom: 6 }}>No insights yet</h3>
-          <p style={{ fontSize: 13, marginBottom: 20 }}>
-            Add some transactions and click "Generate Insight" to see a monthly summary.
+        <div className="insights-empty">
+          <Sparkles size={40} className="insights-empty-icon" />
+          <h3 className="insights-empty-title">No insights yet</h3>
+          <p className="insights-empty-text">
+            Add some transactions and click "Generate Insight" to see a monthly
+            summary.
           </p>
           <button
             type="button"
+            className="insights-generate-btn"
             onClick={generateInsight}
             disabled={generating}
-            style={{
-              background: "#7f1d3a",
-              color: "#fff",
-              border: "none",
-              padding: "10px 20px",
-              borderRadius: 8,
-              fontWeight: 600,
-              cursor: "pointer",
-              fontFamily: "inherit",
-            }}
           >
-            {generating ? "Generating..." : "Generate Now"}
+            {generating ? (
+              <>
+                <Loader2 size={16} className="spin" />
+                Generating...
+              </>
+            ) : (
+              <>
+                <Sparkles size={16} />
+                Generate Now
+              </>
+            )}
           </button>
         </div>
       ) : (
@@ -195,9 +170,10 @@ function Insights() {
                   {insight.summaryText?.split(".")[0] || "Monthly Summary"}
                 </h2>
 
-                <div style={{ display: "flex", gap: 6 }}>
+                <div className="insight-actions">
                   <button
                     type="button"
+                    className="insight-save-btn"
                     onClick={() => toggleSaved(insight._id)}
                     aria-label="Save insight"
                     title={savedIds.includes(insight._id) ? "Unsave" : "Save"}
@@ -211,10 +187,10 @@ function Insights() {
 
                   <button
                     type="button"
+                    className="insight-delete-btn"
                     onClick={() => deleteInsight(insight._id)}
                     aria-label="Delete insight"
                     title="Delete"
-                    style={{ color: "#dc2626" }}
                   >
                     <Trash2 size={19} />
                   </button>
@@ -224,18 +200,9 @@ function Insights() {
               <p>{insight.summaryText}</p>
 
               {insight.flaggedCategories?.length > 0 && (
-                <div
-                  style={{
-                    marginTop: 12,
-                    padding: "10px 14px",
-                    background: "#fef3c7",
-                    borderRadius: 8,
-                    fontSize: 13,
-                    color: "#92400e",
-                  }}
-                >
+                <div className="insight-flagged">
                   {insight.flaggedCategories.map((f, i) => (
-                    <div key={i} style={{ marginBottom: 4 }}>
+                    <div key={i} className="insight-flagged-item">
                       ⚠️ {f.message}
                     </div>
                   ))}
