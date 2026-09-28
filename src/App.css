@@ -73,7 +73,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.85rem;
 }
 
-/* ========== STUDENT SIDEBAR ========== */
+/* ============================================================
+   STUDENT SIDEBAR
+   ============================================================ */
+
 .sidebar {
   background-color: #0a0a0a !important;
   border-right: 1px solid #1f1f1f !important;
@@ -164,7 +167,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #0a0a0a !important;
 }
 
-/* ========== ADMIN SIDEBAR ========== */
+/* ============================================================
+   ADMIN SIDEBAR
+   ============================================================ */
+
 .admin-sidebar {
   background-color: #0a0a0a !important;
   border-right: 1px solid #1f1f1f !important;
@@ -203,8 +209,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #e5e5e5 !important;
 }
 
-.admin-sidebar nav a,
-.admin-logout {
+.admin-sidebar nav a {
   color: #a3a3a3 !important;
   border-radius: 8px !important;
   font-size: 13.5px !important;
@@ -236,7 +241,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px !important;
   font-weight: 600 !important;
   letter-spacing: 0.3px !important;
-  margin: 16px !important;
+  transition: all 0.2s ease !important;
 }
 
 .admin-logout svg {
@@ -253,15 +258,27 @@ h1, h2, h3, h4, h5, h6 {
   color: #0a0a0a !important;
 }
 
-/* ========== HEADERS ========== */
+/* ============================================================
+   HEADERS
+   ============================================================ */
+
 .dashboard-header {
   background-color: #ffffff !important;
   border-bottom: 1px solid #ede8dd !important;
 }
 
-.dashboard-header-left > span {
+.dashboard-header-label {
+  color: #a8a29e !important;
+  font-size: 11px !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+}
+
+.dashboard-header-name {
   color: #1a1a1a !important;
   font-family: "Archivo", sans-serif !important;
+  font-size: 15px !important;
   font-weight: 700 !important;
 }
 
@@ -311,7 +328,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #d4af37 !important;
 }
 
-/* ========== BUTTONS (GLOBAL) ========== */
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
 .primary-button,
 .primary-action,
 .auth-submit,
@@ -361,7 +381,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff !important;
 }
 
-/* ========== CARDS & PANELS ========== */
+/* ============================================================
+   CARDS & PANELS
+   ============================================================ */
+
 .summary-card,
 .dashboard-panel,
 .report-card,
@@ -393,7 +416,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px !important;
 }
 
-/* ========== INPUTS & SELECTS ========== */
+/* ============================================================
+   INPUTS
+   ============================================================ */
+
 input, select, textarea {
   font-family: "Inter", sans-serif !important;
   border-radius: 8px !important;
@@ -405,7 +431,10 @@ input:focus, select:focus, textarea:focus {
   outline: none !important;
 }
 
-/* ========== BUDGET PROGRESS ========== */
+/* ============================================================
+   PROGRESS BARS
+   ============================================================ */
+
 .progress-fill,
 .budget-progress-fill {
   background-color: #d4af37 !important;
@@ -422,7 +451,10 @@ input:focus, select:focus, textarea:focus {
   background-color: #dc2626 !important;
 }
 
-/* ========== BREADCRUMBS ========== */
+/* ============================================================
+   BREADCRUMBS
+   ============================================================ */
+
 .breadcrumb-home {
   color: #d4af37 !important;
 }
@@ -436,7 +468,10 @@ input:focus, select:focus, textarea:focus {
   color: #1a1a1a !important;
 }
 
-/* ========== DARK MODE OVERRIDES ========== */
+/* ============================================================
+   DARK MODE — GLOBAL
+   ============================================================ */
+
 body.dark-mode {
   background-color: #0f0f0f !important;
   color: #f3f4f6 !important;
@@ -447,7 +482,54 @@ body.dark-mode .dashboard-content,
 body.dark-mode .admin-content,
 body.dark-mode .admin-mobile-header {
   background-color: #0f0f0f !important;
+  border-color: #1f1f1f !important;
 }
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode label,
+body.dark-mode small {
+  color: #f3f4f6;
+}
+
+body.dark-mode .dashboard-header-left > span {
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .dashboard-header-label {
+  color: #a8a29e !important;
+}
+
+body.dark-mode .dashboard-header-name {
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .menu-button,
+body.dark-mode .notification-button {
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .notification-button:hover {
+  background-color: #1f1f24 !important;
+  color: #d4af37 !important;
+}
+
+body.dark-mode .profile-avatar {
+  background-color: #d4af37 !important;
+  color: #0a0a0a !important;
+  border-color: #d4af37 !important;
+}
+
+/* ========== DARK MODE — CARDS ========== */
 
 body.dark-mode .summary-card,
 body.dark-mode .dashboard-panel,
@@ -478,89 +560,15 @@ body.dark-mode .settings-item {
   color: #f3f4f6 !important;
 }
 
-body.dark-mode .dashboard-header-left > span,
-body.dark-mode .page-heading h1,
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6 {
+body.dark-mode .page-heading h1 {
   color: #f3f4f6 !important;
 }
 
-body.dark-mode .page-heading p,
-body.dark-mode input,
-body.dark-mode select,
-body.dark-mode textarea {
-  color: #f3f4f6 !important;
-}
-
-body.dark-mode input,
-body.dark-mode select,
-body.dark-mode textarea {
-  background-color: #1f1f24 !important;
-  border-color: #2f2f36 !important;
-}
-
-body.dark-mode .breadcrumb-current {
-  color: #f3f4f6 !important;
-}
-
-body.dark-mode .breadcrumb-item {
+body.dark-mode .page-heading p {
   color: #a3a3a3 !important;
 }
 
-/* ========== RESPONSIVE ========== */
-@media (max-width: 700px) {
-  .page-heading {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
-/* ========== DASHBOARD HEADER FIXES ========== */
-.dashboard-header-label {
-  color: #a8a29e !important;
-}
-
-.dashboard-header-name {
-  color: #1a1a1a !important;
-}
-
-body.dark-mode .dashboard-header-label {
-  color: #a8a29e !important;
-}
-
-body.dark-mode .dashboard-header-name {
-  color: #f3f4f6 !important;
-}
-
-body.dark-mode .dashboard-header {
-  background-color: #0f0f0f !important;
-  border-bottom: 1px solid #1f1f1f !important;
-}
-
-body.dark-mode .menu-button,
-body.dark-mode .notification-button {
-  color: #f3f4f6 !important;
-}
-
-body.dark-mode .notification-button:hover {
-  background-color: #1f1f24 !important;
-  color: #d4af37 !important;
-}
-
-body.dark-mode .profile-avatar {
-  background-color: #d4af37 !important;
-  color: #0a0a0a !important;
-  border-color: #d4af37 !important;
-}
-
-/* ========== SUMMARY CARDS DARK MODE ========== */
-body.dark-mode .summary-card {
-  background-color: #17171a !important;
-  border-color: #2a2a2e !important;
-}
+/* ========== DARK MODE — SUMMARY CARDS ========== */
 
 body.dark-mode .summary-label {
   color: #a3a3a3 !important;
@@ -586,7 +594,8 @@ body.dark-mode .summary-change.goal {
   color: #d4af37 !important;
 }
 
-/* ========== DASHBOARD PANELS ========== */
+/* ========== DARK MODE — PANELS ========== */
+
 body.dark-mode .panel-heading h3 {
   color: #f3f4f6 !important;
 }
@@ -635,7 +644,23 @@ body.dark-mode .saving-tip a {
   color: #d4af37 !important;
 }
 
-/* ========== REPORT FILTERS ========== */
+/* ========== DARK MODE — INPUTS ========== */
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background-color: #1f1f24 !important;
+  color: #f3f4f6 !important;
+  border-color: #2f2f36 !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #6b7280 !important;
+}
+
+/* ========== DARK MODE — REPORT FILTERS ========== */
+
 body.dark-mode .report-filters {
   background: #17171a !important;
   border-color: #2a2a2e !important;
@@ -676,11 +701,6 @@ body.dark-mode .report-summary strong {
   color: #f3f4f6 !important;
 }
 
-body.dark-mode .report-card {
-  background-color: #17171a !important;
-  border-color: #2a2a2e !important;
-}
-
 body.dark-mode .report-card h3 {
   color: #f3f4f6 !important;
 }
@@ -689,7 +709,8 @@ body.dark-mode .report-card p {
   color: #a3a3a3 !important;
 }
 
-/* ========== INSIGHTS ========== */
+/* ========== DARK MODE — INSIGHTS ========== */
+
 body.dark-mode .insight-banner {
   background-color: #17171a !important;
   color: #f3f4f6 !important;
@@ -726,7 +747,8 @@ body.dark-mode .insight-advice span {
   color: #a3a3a3 !important;
 }
 
-/* ========== SAVING TIPS ========== */
+/* ========== DARK MODE — SAVING TIPS ========== */
+
 body.dark-mode .tips-intro {
   background-color: #17171a !important;
   color: #f3f4f6 !important;
@@ -754,14 +776,13 @@ body.dark-mode .tip-card-actions button:hover {
   color: #d4af37 !important;
 }
 
-/* ========== TABS / FILTER BUTTONS ========== */
+/* ========== DARK MODE — TABS ========== */
+
 body.dark-mode .transaction-tabs button {
   color: #a3a3a3 !important;
 }
 
-body.dark-mode .transaction-tabs button.active,
-body.dark-mode .notif-filters button.active,
-body.dark-mode .transaction-tabs button[class*="active"] {
+body.dark-mode .transaction-tabs button.active {
   background-color: #d4af37 !important;
   color: #0a0a0a !important;
 }
@@ -774,15 +795,20 @@ body.dark-mode .notif-filters button {
   color: #a3a3a3 !important;
 }
 
-/* ========== BUTTONS THAT WERE BURGUNDY ========== */
+body.dark-mode .notif-filters button.active {
+  background-color: #d4af37 !important;
+  color: #0a0a0a !important;
+}
+
+/* ========== DARK MODE — BUTTONS ========== */
+
 body.dark-mode .primary-button,
 body.dark-mode .primary-action,
 body.dark-mode .auth-submit,
 body.dark-mode .budget-add-button,
 body.dark-mode .budget-form button,
 body.dark-mode .category-save,
-body.dark-mode .profile-save,
-body.dark-mode .sitemap-button {
+body.dark-mode .profile-save {
   background-color: #0a0a0a !important;
   color: #ffffff !important;
   border-color: #0a0a0a !important;
@@ -794,8 +820,7 @@ body.dark-mode .auth-submit:hover,
 body.dark-mode .budget-add-button:hover,
 body.dark-mode .budget-form button:hover,
 body.dark-mode .category-save:hover,
-body.dark-mode .profile-save:hover,
-body.dark-mode .sitemap-button:hover {
+body.dark-mode .profile-save:hover {
   background-color: #d4af37 !important;
   color: #0a0a0a !important;
   border-color: #d4af37 !important;
@@ -813,14 +838,8 @@ body.dark-mode .secondary-button:hover {
   color: #d4af37 !important;
 }
 
-/* Generate Insight Button — Gold version */
-body.dark-mode button[class*="generate"],
-.insights-page button[class*="primary"] {
-  background-color: #d4af37 !important;
-  color: #0a0a0a !important;
-}
+/* ========== DARK MODE — PROFILE ========== */
 
-/* ========== PROFILE PAGE ========== */
 body.dark-mode .profile-field label {
   color: #f3f4f6 !important;
 }
@@ -856,7 +875,8 @@ body.dark-mode .font-options button.active {
   border-color: #d4af37 !important;
 }
 
-/* ========== CHARTS (Recharts) ========== */
+/* ========== DARK MODE — CHARTS ========== */
+
 body.dark-mode .recharts-cartesian-grid line {
   stroke: #2a2a2e !important;
 }
@@ -870,7 +890,8 @@ body.dark-mode .recharts-legend-item-text {
   color: #a3a3a3 !important;
 }
 
-/* ========== ADMIN PANEL DARK MODE ========== */
+/* ========== DARK MODE — ADMIN PANEL ========== */
+
 body.dark-mode .admin-panel h2 {
   color: #f3f4f6 !important;
 }
@@ -941,4 +962,36 @@ body.dark-mode .settings-value {
   background-color: #1f1f24 !important;
   color: #f3f4f6 !important;
   border-color: #2f2f36 !important;
+}
+
+/* ========== DARK MODE — BREADCRUMBS ========== */
+
+body.dark-mode .breadcrumb-item {
+  color: #a3a3a3 !important;
+}
+
+body.dark-mode .breadcrumb-item:hover {
+  color: #d4af37 !important;
+  background: rgba(212, 175, 55, 0.1) !important;
+}
+
+body.dark-mode .breadcrumb-current {
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .breadcrumb-home {
+  color: #d4af37 !important;
+}
+
+body.dark-mode .breadcrumb-sep {
+  color: #6b7280 !important;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 700px) {
+  .page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
