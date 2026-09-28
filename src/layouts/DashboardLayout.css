@@ -1,6 +1,6 @@
 .dashboard-layout {
   min-height: 100vh;
-  background-color: #faf8f5;
+  background-color: transparent;
 }
 
 .dashboard-main {
@@ -126,6 +126,36 @@
 
 .dashboard-content {
   padding: 32px;
+}
+
+body.dark-mode .dashboard-header {
+  background-color: #0a0a0a;
+  border-bottom-color: #1f1f1f;
+}
+
+body.dark-mode .dashboard-header-label {
+  color: #a8a29e;
+}
+
+body.dark-mode .dashboard-header-name {
+  color: #f3f4f6;
+}
+
+body.dark-mode .menu-button,
+body.dark-mode .notification-button {
+  color: #f3f4f6;
+}
+
+body.dark-mode .menu-button:hover,
+body.dark-mode .notification-button:hover {
+  background-color: #1f1f24;
+  color: #d4af37;
+}
+
+body.dark-mode .profile-avatar {
+  background-color: #d4af37;
+  color: #0a0a0a;
+  border-color: #d4af37;
 }
 
 @media (max-width: 991px) {

@@ -30,6 +30,12 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+  min-height: 100vh;
+}
+
 body {
   margin: 0;
   background-color: #faf8f5;
@@ -559,8 +565,14 @@ body.dark-mode {
   color: #f3f4f6 !important;
 }
 
-body.dark-mode .dashboard-header,
+body.dark-mode #root {
+  background-color: #0a0a0a !important;
+}
+
+body.dark-mode .dashboard-layout,
+body.dark-mode .dashboard-main,
 body.dark-mode .dashboard-content,
+body.dark-mode .admin-layout,
 body.dark-mode .admin-content,
 body.dark-mode .admin-mobile-header {
   background-color: #0a0a0a !important;
@@ -1303,53 +1315,4 @@ body.dark-mode .category-group h2 {
     align-items: flex-start;
     flex-direction: column;
   }
-}
-.dashboard-layout,
-.dashboard-main,
-.dashboard-content,
-.admin-layout,
-.admin-content {
-  min-height: 100vh;
-}
-
-body.dark-mode .dashboard-layout,
-body.dark-mode .dashboard-main,
-body.dark-mode .admin-layout {
-  background-color: #0a0a0a !important;
-}
-
-body.dark-mode .dashboard-content,
-body.dark-mode .admin-content {
-  background-color: #0a0a0a !important;
-}
-
-/* body.dark-mode .page-heading,
-body.dark-mode .transactions-page,
-body.dark-mode .dashboard-page,
-body.dark-mode .notifications-page,
-body.dark-mode .insights-page,
-body.dark-mode .budget-page,
-body.dark-mode .reports-page,
-body.dark-mode .categories-page,
-body.dark-mode .saving-tips-page,
-body.dark-mode .profile-page,
-body.dark-mode .admin-dashboard-page {
-  background-color: #0a0a0a !important;
-  min-height: 100vh;
-} */
-
-html,
-body,
-#root {
-  min-height: 100vh;
-}
-
-body.dark-mode,
-body.dark-mode #root,
-body.dark-mode .dashboard-layout,
-body.dark-mode .dashboard-main,
-body.dark-mode .dashboard-content,
-body.dark-mode .admin-layout,
-body.dark-mode .admin-content {
-  background-color: #0a0a0a !important;
 }
