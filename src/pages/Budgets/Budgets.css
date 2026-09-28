@@ -1,0 +1,307 @@
+.budget-add-button,
+.budget-form button {
+  display: flex;
+  padding: 9px 15px;
+  align-items: center;
+  gap: 7px;
+  color: #fff;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.budget-add-button:hover,
+.budget-form button:hover {
+  background-color: var(--primary-dark);
+}
+
+.budget-form {
+  display: flex;
+  margin-bottom: 18px;
+  padding: 15px;
+  gap: 10px;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.budget-form select,
+.budget-form input {
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  outline: none;
+}
+
+.budget-form select:focus,
+.budget-form input:focus {
+  border-color: var(--primary);
+}
+
+.budget-form select {
+  flex: 1;
+}
+
+.budget-form input {
+  width: 180px;
+}
+
+.budget-table-wrap {
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 9px;
+}
+
+.budget-table-head,
+.budget-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1.3fr 2fr 1fr 0.5fr;
+  padding: 14px 18px;
+  align-items: center;
+  gap: 16px;
+}
+
+.budget-table-head {
+  color: var(--text-muted);
+  background-color: #fafafa;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.budget-row {
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.75rem;
+  color: var(--text-dark);
+}
+
+.budget-row:last-child {
+  border-bottom: none;
+}
+
+.budget-row strong {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.budget-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.budget-progress-track {
+  flex: 1;
+  height: 6px;
+  overflow: hidden;
+  background-color: #edf0f2;
+  border-radius: 10px;
+}
+
+.budget-progress-fill {
+  height: 100%;
+  background-color: var(--success);
+  transition: width 0.3s ease;
+}
+
+.warning-fill {
+  background-color: var(--warning);
+}
+
+.danger-fill {
+  background-color: var(--danger);
+}
+
+.budget-progress small {
+  width: 32px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.budget-status {
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-good {
+  color: var(--success);
+  background-color: #ecfdf3;
+}
+
+.status-warning {
+  color: #a16207;
+  background-color: #fffbeb;
+}
+
+.status-danger {
+  color: var(--danger);
+  background-color: #fef2f2;
+}
+
+/* ============ DELETE BUTTON ============ */
+.budget-delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.budget-delete-btn:hover {
+  background: #fee2e2;
+  border-color: #dc2626;
+}
+
+/* ============ EMPTY / LOADING ============ */
+.budget-empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: #888;
+  background-color: #fff;
+  border-radius: 9px;
+  border: 1px solid var(--border-color);
+  font-size: 0.85rem;
+}
+
+.budget-alert {
+  display: flex;
+  margin-top: 17px;
+  padding: 13px 16px;
+  align-items: center;
+  gap: 9px;
+  color: var(--danger);
+  background-color: #fef2f2;
+  border: 1px solid #fee2e2;
+  border-radius: 7px;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 800px) {
+  .budget-table-wrap {
+    overflow-x: auto;
+  }
+
+  .budget-table-head,
+  .budget-row {
+    min-width: 800px;
+  }
+
+  .budget-form {
+    flex-direction: column;
+  }
+
+  .budget-form input {
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   DARK MODE OVERRIDES
+   ============================================================ */
+
+body.dark-mode .budget-form {
+  background-color: #22252a;
+  border-color: #363a41;
+}
+
+body.dark-mode .budget-form select,
+body.dark-mode .budget-form input {
+  background-color: #292c31;
+  color: #f3f4f6;
+  border-color: #4b4f57;
+}
+
+body.dark-mode .budget-form select option {
+  background-color: #292c31;
+  color: #f3f4f6;
+}
+
+body.dark-mode .budget-form input::placeholder {
+  color: #6b7280;
+}
+
+body.dark-mode .budget-table-wrap {
+  background-color: #22252a;
+  border-color: #363a41;
+}
+
+body.dark-mode .budget-table-head {
+  background-color: #292c31;
+  color: #b1b5bd;
+  border-color: #363a41;
+}
+
+body.dark-mode .budget-row {
+  border-color: #363a41;
+  color: #f3f4f6;
+}
+
+body.dark-mode .budget-row strong {
+  color: #f3f4f6;
+}
+
+body.dark-mode .budget-progress-track {
+  background-color: #363a41;
+}
+
+body.dark-mode .budget-progress small {
+  color: #b1b5bd;
+}
+
+body.dark-mode .status-good {
+  color: #4ade80;
+  background-color: rgba(22, 163, 74, 0.15);
+}
+
+body.dark-mode .status-warning {
+  color: #fbbf24;
+  background-color: rgba(217, 119, 6, 0.15);
+}
+
+body.dark-mode .status-danger {
+  color: #f87171;
+  background-color: rgba(220, 38, 38, 0.15);
+}
+
+body.dark-mode .budget-delete-btn {
+  color: #f87171;
+  border-color: #7f1d1d;
+}
+
+body.dark-mode .budget-delete-btn:hover {
+  background: rgba(220, 38, 38, 0.2);
+  border-color: #f87171;
+}
+
+body.dark-mode .budget-empty {
+  background-color: #22252a;
+  border-color: #363a41;
+  color: #b1b5bd;
+}
+
+body.dark-mode .budget-alert {
+  color: #f87171;
+  background-color: rgba(220, 38, 38, 0.15);
+  border-color: #7f1d1d;
+}

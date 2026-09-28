@@ -1,0 +1,50 @@
+.admin-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+  
+  .admin-stat-grid > div,
+  .admin-panel {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+  }
+  
+  .admin-stat-grid svg {
+    color: var(--primary);
+  }
+  
+  .admin-stat-grid span,
+  .admin-stat-grid strong {
+    display: block;
+  }
+  
+  .admin-stat-grid span {
+    margin-top: 12px;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+  }
+  
+  .admin-stat-grid strong {
+    margin-top: 5px;
+    font-size: 1.25rem;
+  }
+  
+  .admin-panel h2 {
+    margin-top: 0;
+    font-size: 0.95rem;
+  }
+  
+  .admin-panel p {
+    color: var(--text-muted);
+    font-size: 0.76rem;
+  }
+  
+  @media (max-width: 700px) {
+    .admin-stat-grid {
+      grid-template-columns: 1fr;
+    }
+  }

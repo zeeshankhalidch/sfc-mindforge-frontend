@@ -1,0 +1,131 @@
+.lux-footer {
+  background: #0a0a0a;
+  color: #a3a3a3;
+  padding: 50px 0 26px;
+}
+
+.lux-footer-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px 36px;
+  border-bottom: 1px solid #1f1f1f;
+  gap: 20px;
+}
+
+.lux-footer-feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #a3a3a3;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+.lux-footer-feature svg {
+  color: #d4af37;
+  flex-shrink: 0;
+}
+
+.lux-footer-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 34px 32px;
+  gap: 30px;
+}
+
+.lux-footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lux-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lux-footer-logo-text {
+  font-family: "Archivo", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+.lux-footer-brand p {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  color: #737373;
+}
+
+.lux-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+
+.lux-footer-links a {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  color: #a3a3a3;
+  text-decoration: none;
+  transition: color 0.2s;
+  letter-spacing: 0.4px;
+}
+
+.lux-footer-links a:hover {
+  color: #d4af37;
+}
+
+.lux-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 22px 32px 0;
+  font-family: "Inter", sans-serif;
+  color: #525252;
+  font-size: 12px;
+  border-top: 1px solid #1f1f1f;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 900px) {
+  .lux-footer-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lux-footer-feature {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  .lux-footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lux-footer-bottom {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lux-footer-features {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-bottom: 26px;
+  }
+}

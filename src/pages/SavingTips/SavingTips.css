@@ -1,0 +1,106 @@
+.tips-intro {
+    display: flex;
+    margin-bottom: 18px;
+    padding: 13px 16px;
+    align-items: center;
+    gap: 9px;
+    color: var(--primary);
+    background-color: var(--primary-light);
+    border-radius: 7px;
+    font-size: 0.75rem;
+  }
+  
+  .tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .tip-card {
+    display: grid;
+    grid-template-columns: 50px 1fr auto;
+    padding: 18px;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+  }
+  
+  .tip-card-icon {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background-color: var(--primary-light);
+    border-radius: 50%;
+  }
+  
+  .tip-card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .tip-card-title h2 {
+    margin: 0;
+    font-size: 0.92rem;
+  }
+  
+  .tip-card-title span {
+    padding: 3px 7px;
+    color: var(--primary);
+    background-color: var(--primary-light);
+    border-radius: 15px;
+    font-size: 0.6rem;
+  }
+  
+  .tip-card-content p {
+    margin: 7px 0 0;
+    max-width: 750px;
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    line-height: 1.6;
+  }
+  
+  .tip-card-actions {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .tip-card-actions button {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: none;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .tip-card-actions button:hover {
+    background-color: var(--primary-light);
+  }
+  
+  .empty-tips {
+    padding: 50px;
+    text-align: center;
+    color: var(--text-muted);
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 650px) {
+    .tip-card {
+      grid-template-columns: 45px 1fr;
+    }
+  
+    .tip-card-actions {
+      grid-column: 2;
+    }
+  }

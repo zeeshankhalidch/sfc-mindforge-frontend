@@ -1,0 +1,125 @@
+.category-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+  }
+  
+  .category-form-panel,
+  .category-list-panel {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 9px;
+  }
+  
+  .category-form-panel {
+    align-self: start;
+    padding: 20px;
+  }
+  
+  .category-form-panel h2,
+  .category-group h2 {
+    margin: 0 0 18px;
+    font-size: 0.95rem;
+  }
+  
+  .category-field {
+    margin-bottom: 15px;
+  }
+  
+  .category-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .category-field input,
+  .category-field select {
+    width: 100%;
+    height: 41px;
+    padding: 0 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    outline: none;
+  }
+  
+  .category-field input:focus,
+  .category-field select:focus {
+    border-color: var(--primary);
+  }
+  
+  .category-save {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    color: #fff;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+  
+  .category-list-panel {
+    padding: 20px;
+  }
+  
+  .category-group + .category-group {
+    margin-top: 30px;
+  }
+  
+  .category-row {
+    display: flex;
+    padding: 11px 5px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .category-row:last-child {
+    border-bottom: none;
+  }
+  
+  .category-name {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .category-icon {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background-color: var(--primary-light);
+    border-radius: 7px;
+  }
+  
+  .category-actions {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .category-actions button {
+    padding: 5px;
+    color: var(--primary);
+    background: none;
+    border: none;
+  }
+  
+  .category-actions .category-delete {
+    color: var(--danger);
+  }
+  
+  @media (max-width: 800px) {
+    .category-layout {
+      grid-template-columns: 1fr;
+    }
+  }

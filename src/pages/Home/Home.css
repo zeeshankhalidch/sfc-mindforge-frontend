@@ -1,0 +1,445 @@
+.lux-main {
+  background: #ffffff;
+  color: #0a0a0a;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.lux-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.lux-hero {
+  position: relative;
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 32px;
+  background: #f4f4f5;
+  overflow: hidden;
+}
+
+.lux-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.lux-wave {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 340px;
+  opacity: 0.95;
+}
+
+.lux-wave-left {
+  left: -60px;
+}
+
+.lux-wave-right {
+  right: -60px;
+}
+
+.lux-wave svg {
+  width: 100%;
+  height: 100%;
+}
+
+.lux-coin {
+  position: absolute;
+  animation: coinFloat 6s ease-in-out infinite;
+  filter: drop-shadow(0 14px 28px rgba(184, 148, 31, 0.45));
+}
+
+.lux-coin-svg {
+  display: block;
+  animation: coinSpin 6s linear infinite;
+}
+
+.lux-coin-1 { top: 10%; left: 18%; animation-delay: 0s; }
+.lux-coin-2 { top: 30%; left: 6%; animation-delay: 1.2s; }
+.lux-coin-3 { bottom: 24%; left: 14%; animation-delay: 0.6s; }
+.lux-coin-4 { top: 12%; right: 20%; animation-delay: 1.8s; }
+.lux-coin-5 { top: 36%; right: 8%; animation-delay: 0.9s; }
+.lux-coin-6 { bottom: 22%; right: 16%; animation-delay: 2.4s; }
+
+@keyframes coinFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+
+@keyframes coinSpin {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+.lux-hero-inner {
+  position: relative;
+  z-index: 5;
+  max-width: 760px;
+  text-align: center;
+}
+
+.lux-hero-title {
+  margin: 0 0 28px;
+  font-family: "Archivo", sans-serif;
+  font-size: 88px;
+  line-height: 0.95;
+  font-weight: 900;
+  color: #0a0a0a;
+  letter-spacing: -3.5px;
+}
+
+.lux-hero-text {
+  margin: 0 auto 40px;
+  max-width: 560px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #525252;
+}
+
+.lux-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 42px;
+  background: #0a0a0a;
+  color: #ffffff;
+  font-family: "Archivo", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: all 0.25s;
+  box-shadow: 0 14px 32px rgba(10, 10, 10, 0.2);
+}
+
+.lux-hero-cta:hover {
+  background: #1a1a1a;
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(10, 10, 10, 0.3);
+}
+
+.lux-features {
+  padding: 120px 0;
+  background: #ffffff;
+}
+
+.lux-section-label {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #b8941f;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.lux-section-heading {
+  max-width: 720px;
+  margin: 0 0 72px;
+  font-family: "Archivo", sans-serif;
+  font-size: 52px;
+  line-height: 1.08;
+  font-weight: 800;
+  color: #0a0a0a;
+  letter-spacing: -2px;
+}
+
+.lux-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.lux-feature {
+  padding: 40px 32px;
+  background: #fafafa;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+
+.lux-feature:hover {
+  background: #ffffff;
+  border-color: #d4af37;
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(212, 175, 55, 0.12);
+}
+
+.lux-feature-number {
+  display: block;
+  font-family: "Archivo", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #b8941f;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.lux-feature h3 {
+  margin: 0 0 12px;
+  font-family: "Archivo", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: -0.5px;
+}
+
+.lux-feature p {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #737373;
+}
+
+.lux-portfolio {
+  padding: 120px 0;
+  background: #0a0a0a;
+}
+
+.lux-portfolio .lux-section-heading {
+  color: #ffffff;
+}
+
+.lux-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.lux-portfolio-item {
+  display: block;
+  padding: 32px;
+  background: #141414;
+  border: 1px solid #262626;
+  border-radius: 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.lux-portfolio-item:hover {
+  border-color: #d4af37;
+  background: #1a1a1a;
+  transform: translateY(-4px);
+}
+
+.lux-portfolio-number {
+  display: block;
+  font-family: "Archivo", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: #d4af37;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.lux-portfolio-item h4 {
+  margin: 0 0 8px;
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+}
+
+.lux-portfolio-item p {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  color: #737373;
+  line-height: 1.55;
+}
+
+.lux-cta {
+  padding: 120px 0;
+  background: #ffffff;
+}
+
+.lux-cta-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 32px;
+  text-align: center;
+}
+
+.lux-cta-heading {
+  margin: 0 0 20px;
+  font-family: "Archivo", sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  color: #0a0a0a;
+  letter-spacing: -2.5px;
+  line-height: 1;
+}
+
+.lux-cta-text {
+  margin: 0 0 44px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #737373;
+  line-height: 1.7;
+}
+
+.lux-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.lux-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 34px;
+  background: #0a0a0a;
+  color: #ffffff;
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: all 0.2s;
+}
+
+.lux-cta-primary:hover {
+  background: #b8941f;
+  transform: translateY(-2px);
+}
+
+.lux-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 34px;
+  background: transparent;
+  color: #0a0a0a;
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-decoration: none;
+  border: 1.5px solid #0a0a0a;
+  border-radius: 40px;
+  transition: all 0.2s;
+}
+
+.lux-cta-secondary:hover {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+@media (max-width: 991px) {
+  .lux-hero {
+    min-height: 600px;
+    padding: 80px 24px;
+  }
+
+  .lux-hero-title {
+    font-size: 60px;
+    letter-spacing: -2px;
+  }
+
+  .lux-wave {
+    width: 240px;
+  }
+
+  .lux-coin-1, .lux-coin-3, .lux-coin-5 { transform: scale(0.7); }
+  .lux-coin-2, .lux-coin-4, .lux-coin-6 { transform: scale(0.6); }
+
+  .lux-features, .lux-portfolio, .lux-cta {
+    padding: 80px 0;
+  }
+
+  .lux-section-heading {
+    font-size: 38px;
+    letter-spacing: -1.2px;
+    margin-bottom: 52px;
+  }
+
+  .lux-features-grid,
+  .lux-portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lux-cta-heading {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .lux-container {
+    padding: 0 20px;
+  }
+
+  .lux-hero {
+    min-height: 540px;
+    padding: 60px 20px;
+  }
+
+  .lux-hero-title {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+  }
+
+  .lux-hero-text {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .lux-hero-cta {
+    padding: 14px 32px;
+    letter-spacing: 2px;
+  }
+
+  .lux-wave {
+    width: 160px;
+  }
+
+  .lux-coin-1, .lux-coin-3, .lux-coin-5 { transform: scale(0.5); }
+  .lux-coin-2, .lux-coin-4, .lux-coin-6 { transform: scale(0.4); }
+
+  .lux-features, .lux-portfolio, .lux-cta {
+    padding: 60px 0;
+  }
+
+  .lux-section-heading {
+    font-size: 28px;
+    letter-spacing: -1px;
+    margin-bottom: 40px;
+  }
+
+  .lux-features-grid,
+  .lux-portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lux-cta-heading {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .lux-cta-text {
+    font-size: 14px;
+  }
+
+  .lux-cta-buttons {
+    flex-direction: column;
+  }
+
+  .lux-cta-primary, .lux-cta-secondary {
+    justify-content: center;
+    width: 100%;
+  }
+}
