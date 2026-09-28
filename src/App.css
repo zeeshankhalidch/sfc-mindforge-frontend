@@ -1364,3 +1364,91 @@ body.dark-mode .tip-icon {
   background-color: rgba(212, 175, 55, 0.15) !important;
   color: #d4af37 !important;
 }
+html.dark-mode .dashboard-header,
+body.dark-mode .dashboard-header,
+body.dark-mode div.dashboard-header,
+body.dark-mode header.dashboard-header {
+  background-color: #0a0a0a !important;
+  border-bottom: 1px solid #1f1f1f !important;
+  color: #f3f4f6 !important;
+}
+
+html.dark-mode .dashboard-header-label,
+body.dark-mode .dashboard-header-label {
+  color: #a8a29e !important;
+}
+
+html.dark-mode .dashboard-header-name,
+body.dark-mode .dashboard-header-name {
+  color: #f3f4f6 !important;
+}
+
+html.dark-mode .dashboard-header .menu-button,
+html.dark-mode .dashboard-header .notification-button,
+body.dark-mode .dashboard-header .menu-button,
+body.dark-mode .dashboard-header .notification-button {
+  color: #f3f4f6 !important;
+}
+
+html.dark-mode .dashboard-header .menu-button:hover,
+html.dark-mode .dashboard-header .notification-button:hover,
+body.dark-mode .dashboard-header .menu-button:hover,
+body.dark-mode .dashboard-header .notification-button:hover {
+  background-color: #1f1f24 !important;
+  color: #d4af37 !important;
+}
+
+html.dark-mode .profile-avatar,
+body.dark-mode .profile-avatar {
+  background-color: #d4af37 !important;
+  color: #0a0a0a !important;
+  border-color: #d4af37 !important;
+}
+
+html.dark-mode .top-category,
+body.dark-mode .top-category {
+  background-color: #17171a !important;
+  border: 1px solid #2a2a2e !important;
+}
+
+html.dark-mode .top-category span,
+body.dark-mode .top-category span {
+  color: #a3a3a3 !important;
+}
+
+html.dark-mode .top-category strong,
+body.dark-mode .top-category strong {
+  color: #d4af37 !important;
+}
+
+html.dark-mode .top-category p,
+body.dark-mode .top-category p {
+  color: #a3a3a3 !important;
+}
+
+html.dark-mode .saving-tip,
+body.dark-mode .saving-tip {
+  background-color: #17171a !important;
+  border: 1px solid #2a2a2e !important;
+}
+
+html.dark-mode .saving-tip strong,
+body.dark-mode .saving-tip strong {
+  color: #f3f4f6 !important;
+}
+
+html.dark-mode .saving-tip p,
+body.dark-mode .saving-tip p {
+  color: #a3a3a3 !important;
+}
+
+html.dark-mode .saving-tip a,
+body.dark-mode .saving-tip a {
+  color: #d4af37 !important;
+}
+
+html.dark-mode .tip-icon,
+body.dark-mode .tip-icon {
+  background-color: rgba(212, 175, 55, 0.15) !important;
+  color: #d4af37 !important;
+}
