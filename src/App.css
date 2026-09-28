@@ -1316,3 +1316,51 @@ body.dark-mode .category-group h2 {
     flex-direction: column;
   }
 }
+
+body.dark-mode .dashboard-header {
+  background-color: #0a0a0a !important;
+  border-bottom: 1px solid #1f1f1f !important;
+}
+
+body.dark-mode .dashboard-header-label {
+  color: #a8a29e !important;
+}
+
+body.dark-mode .dashboard-header-name {
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .top-category,
+body.dark-mode .saving-tip {
+  background-color: #17171a !important;
+  border: 1px solid #2a2a2e !important;
+}
+
+body.dark-mode .top-category span {
+  color: #a3a3a3 !important;
+}
+
+body.dark-mode .top-category strong {
+  color: #d4af37 !important;
+}
+
+body.dark-mode .top-category p {
+  color: #a3a3a3 !important;
+}
+
+body.dark-mode .saving-tip strong {
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .saving-tip p {
+  color: #a3a3a3 !important;
+}
+
+body.dark-mode .saving-tip a {
+  color: #d4af37 !important;
+}
+
+body.dark-mode .tip-icon {
+  background-color: rgba(212, 175, 55, 0.15) !important;
+  color: #d4af37 !important;
+}
