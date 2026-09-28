@@ -11,7 +11,7 @@ function SavingTips() {
   const [tips, setTips] = useState([]);
   const [bookmarks, setBookmarks] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [filter, setFilter] = useState("all"); // all | bookmarked
+  const [filter, setFilter] = useState("all");
 
   useEffect(() => {
     if (!localStorage.getItem("token")) {
@@ -38,12 +38,9 @@ function SavingTips() {
     try {
       const res = await API.get("/bookmarks");
       setBookmarks(res.data.bookmarks || []);
-    } catch (error) {
-      // silent fail
-    }
+    } catch (error) {}
   };
 
-  // ============ PIN ============
   const togglePin = async (id) => {
     try {
       const res = await API.put(`/saving-tips/${id}/pin`);
@@ -57,7 +54,6 @@ function SavingTips() {
     }
   };
 
-  // ============ DISMISS ============
   const dismissTip = async (id) => {
     try {
       await API.put(`/saving-tips/${id}/dismiss`);
@@ -68,7 +64,6 @@ function SavingTips() {
     }
   };
 
-  // ============ BOOKMARK ============
   const isBookmarked = (tipId) =>
     bookmarks.some((b) => b.referenceId === tipId && b.type === "saving_tip");
 
@@ -80,12 +75,10 @@ function SavingTips() {
 
     try {
       if (existing) {
-        // Remove bookmark
         await API.delete(`/bookmarks/${existing._id}`);
         setBookmarks((curr) => curr.filter((b) => b._id !== existing._id));
         toast.success("Bookmark removed");
       } else {
-        // Add bookmark
         const res = await API.post("/bookmarks", {
           type: "saving_tip",
           referenceId: tip._id,
@@ -99,7 +92,6 @@ function SavingTips() {
     }
   };
 
-  // ============ FILTER + SORT ============
   let displayed = [...tips].sort(
     (a, b) => (b.isPinned ? 1 : 0) - (a.isPinned ? 1 : 0)
   );
@@ -111,7 +103,7 @@ function SavingTips() {
   const bookmarkedCount = tips.filter((t) => isBookmarked(t._id)).length;
 
   return (
-    <div>
+    <div className="saving-tips-page">
       <div className="page-heading">
         <div>
           <h1>Saving Tips</h1>
@@ -124,52 +116,25 @@ function SavingTips() {
         <span>Tips with the highest potential savings are shown first.</span>
       </div>
 
-      {/* Filter Tabs */}
-      <div
-        style={{
-          display: "flex",
-          gap: 8,
-          marginBottom: 18,
-          borderBottom: "1px solid #e5e7eb",
-          paddingBottom: 12,
-        }}
-      >
+      <div className="saving-tips-filters">
         <button
           type="button"
+          className={filter === "all" ? "active" : ""}
           onClick={() => setFilter("all")}
-          style={{
-            background: filter === "all" ? "#7f1d3a" : "transparent",
-            color: filter === "all" ? "#fff" : "#6b7280",
-            border: "none",
-            padding: "8px 16px",
-            borderRadius: 8,
-            fontSize: 13,
-            fontWeight: 600,
-            cursor: "pointer",
-          }}
         >
           All Tips ({tips.length})
         </button>
         <button
           type="button"
+          className={filter === "bookmarked" ? "active" : ""}
           onClick={() => setFilter("bookmarked")}
-          style={{
-            background: filter === "bookmarked" ? "#7f1d3a" : "transparent",
-            color: filter === "bookmarked" ? "#fff" : "#6b7280",
-            border: "none",
-            padding: "8px 16px",
-            borderRadius: 8,
-            fontSize: 13,
-            fontWeight: 600,
-            cursor: "pointer",
-          }}
         >
           🔖 Bookmarked ({bookmarkedCount})
         </button>
       </div>
 
       {loading ? (
-        <p style={{ padding: "20px", color: "#888" }}>Loading tips...</p>
+        <p className="saving-tips-loading">Loading tips...</p>
       ) : (
         <div className="tips-list">
           {displayed.map((tip) => {
@@ -196,15 +161,12 @@ function SavingTips() {
                 </div>
 
                 <div className="tip-card-actions">
-                  {/* Bookmark button */}
                   <button
                     type="button"
+                    className={bookmarked ? "tip-btn-active" : ""}
                     onClick={() => toggleBookmark(tip)}
                     aria-label={bookmarked ? "Remove bookmark" : "Bookmark tip"}
                     title={bookmarked ? "Remove bookmark" : "Bookmark for later"}
-                    style={{
-                      color: bookmarked ? "#7f1d3a" : "inherit",
-                    }}
                   >
                     {bookmarked ? (
                       <BookmarkCheck size={18} />
@@ -213,24 +175,16 @@ function SavingTips() {
                     )}
                   </button>
 
-                  {/* Pin button */}
                   <button
                     type="button"
+                    className={tip.isPinned ? "tip-btn-pin" : ""}
                     onClick={() => togglePin(tip._id)}
                     aria-label={tip.isPinned ? "Unpin tip" : "Pin tip"}
                     title={tip.isPinned ? "Unpin from top" : "Pin to top"}
-                    style={{
-                      color: tip.isPinned ? "#d97706" : "inherit",
-                    }}
                   >
-                    {tip.isPinned ? (
-                      <PinOff size={18} />
-                    ) : (
-                      <Pin size={18} />
-                    )}
+                    {tip.isPinned ? <PinOff size={18} /> : <Pin size={18} />}
                   </button>
 
-                  {/* Dismiss button */}
                   <button
                     type="button"
                     onClick={() => dismissTip(tip._id)}

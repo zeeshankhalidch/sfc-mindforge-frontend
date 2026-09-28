@@ -1,106 +1,293 @@
+.saving-tips-page {
+  min-height: 100vh;
+}
+
 .tips-intro {
-    display: flex;
-    margin-bottom: 18px;
-    padding: 13px 16px;
-    align-items: center;
-    gap: 9px;
-    color: var(--primary);
-    background-color: var(--primary-light);
-    border-radius: 7px;
-    font-size: 0.75rem;
-  }
-  
-  .tips-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  
+  display: flex;
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  align-items: center;
+  gap: 10px;
+  color: #b8941f;
+  background-color: #fef9e7;
+  border: 1px solid #f5e6b8;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.tips-intro svg {
+  color: #b8941f;
+  flex-shrink: 0;
+}
+
+.saving-tips-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #ede8dd;
+}
+
+.saving-tips-filters button {
+  padding: 10px 20px;
+  background: transparent;
+  color: #737373;
+  border: none;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.saving-tips-filters button:hover {
+  color: #1a1a1a;
+  background-color: #f5f1ea;
+}
+
+.saving-tips-filters button.active {
+  background-color: #d4af37;
+  color: #0a0a0a;
+  font-weight: 700;
+}
+
+.saving-tips-loading {
+  padding: 24px 20px;
+  color: #737373;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.tip-card {
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  padding: 20px;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: #ffffff;
+  border: 1px solid #ede8dd;
+  border-radius: 12px;
+  transition: border-color 0.2s ease;
+}
+
+.tip-card:hover {
+  border-color: #d4af37;
+}
+
+.tip-card-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  color: #b8941f;
+  background-color: #fef9e7;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tip-card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tip-card-title h2 {
+  margin: 0;
+  color: #1a1a1a;
+  font-family: "Archivo", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.tip-card-title span {
+  padding: 4px 10px;
+  color: #b8941f;
+  background-color: #fef9e7;
+  border: 1px solid #f5e6b8;
+  border-radius: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.tip-card-content p {
+  margin: 8px 0 0;
+  max-width: 750px;
+  color: #525252;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.tip-card-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.tip-card-actions button {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  color: #525252;
+  background: transparent;
+  border: 1px solid #ede8dd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tip-card-actions button:hover {
+  background-color: #f5f1ea;
+  color: #1a1a1a;
+}
+
+.tip-card-actions .tip-btn-active {
+  color: #b8941f;
+  background-color: #fef9e7;
+  border-color: #f5e6b8;
+}
+
+.tip-card-actions .tip-btn-active:hover {
+  background-color: #fef3c7;
+}
+
+.tip-card-actions .tip-btn-pin {
+  color: #b8941f;
+  background-color: #fef9e7;
+  border-color: #f5e6b8;
+}
+
+.tip-card-actions .tip-btn-pin:hover {
+  background-color: #fef3c7;
+}
+
+.empty-tips {
+  padding: 60px 20px;
+  text-align: center;
+  color: #737373;
+  background-color: #ffffff;
+  border: 1px solid #ede8dd;
+  border-radius: 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+@media (max-width: 650px) {
   .tip-card {
-    display: grid;
-    grid-template-columns: 50px 1fr auto;
-    padding: 18px;
-    align-items: flex-start;
-    gap: 15px;
-    background-color: #fff;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
+    grid-template-columns: 45px 1fr;
   }
-  
-  .tip-card-icon {
-    display: flex;
-    width: 45px;
-    height: 45px;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary);
-    background-color: var(--primary-light);
-    border-radius: 50%;
-  }
-  
-  .tip-card-title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .tip-card-title h2 {
-    margin: 0;
-    font-size: 0.92rem;
-  }
-  
-  .tip-card-title span {
-    padding: 3px 7px;
-    color: var(--primary);
-    background-color: var(--primary-light);
-    border-radius: 15px;
-    font-size: 0.6rem;
-  }
-  
-  .tip-card-content p {
-    margin: 7px 0 0;
-    max-width: 750px;
-    color: var(--text-muted);
-    font-size: 0.76rem;
-    line-height: 1.6;
-  }
-  
+
   .tip-card-actions {
-    display: flex;
-    gap: 4px;
+    grid-column: 2;
+    margin-top: 8px;
   }
-  
-  .tip-card-actions button {
-    display: flex;
-    width: 32px;
-    height: 32px;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary);
-    background: none;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  .tip-card-actions button:hover {
-    background-color: var(--primary-light);
-  }
-  
-  .empty-tips {
-    padding: 50px;
-    text-align: center;
-    color: var(--text-muted);
-    background-color: #fff;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-  }
-  
-  @media (max-width: 650px) {
-    .tip-card {
-      grid-template-columns: 45px 1fr;
-    }
-  
-    .tip-card-actions {
-      grid-column: 2;
-    }
-  }
+}
+
+body.dark-mode .saving-tips-page {
+  background-color: #0a0a0a;
+}
+
+body.dark-mode .tips-intro {
+  color: #f5d572;
+  background-color: rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+body.dark-mode .tips-intro svg {
+  color: #d4af37;
+}
+
+body.dark-mode .saving-tips-filters {
+  border-color: #2a2a2e;
+}
+
+body.dark-mode .saving-tips-filters button {
+  color: #a3a3a3;
+}
+
+body.dark-mode .saving-tips-filters button:hover {
+  color: #f3f4f6;
+  background-color: #1f1f24;
+}
+
+body.dark-mode .saving-tips-filters button.active {
+  background-color: #d4af37;
+  color: #0a0a0a;
+}
+
+body.dark-mode .saving-tips-loading {
+  color: #a3a3a3;
+}
+
+body.dark-mode .tip-card {
+  background-color: #17171a;
+  border-color: #2a2a2e;
+}
+
+body.dark-mode .tip-card:hover {
+  border-color: #d4af37;
+}
+
+body.dark-mode .tip-card-icon {
+  background-color: rgba(212, 175, 55, 0.15);
+  color: #d4af37;
+}
+
+body.dark-mode .tip-card-title h2 {
+  color: #f3f4f6;
+}
+
+body.dark-mode .tip-card-title span {
+  color: #f5d572;
+  background-color: rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+body.dark-mode .tip-card-content p {
+  color: #a3a3a3;
+}
+
+body.dark-mode .tip-card-actions button {
+  color: #a3a3a3;
+  border-color: #2a2a2e;
+}
+
+body.dark-mode .tip-card-actions button:hover {
+  background-color: #1f1f24;
+  color: #d4af37;
+  border-color: #d4af37;
+}
+
+body.dark-mode .tip-card-actions .tip-btn-active,
+body.dark-mode .tip-card-actions .tip-btn-pin {
+  color: #d4af37;
+  background-color: rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+body.dark-mode .tip-card-actions .tip-btn-active:hover,
+body.dark-mode .tip-card-actions .tip-btn-pin:hover {
+  background-color: rgba(212, 175, 55, 0.2);
+}
+
+body.dark-mode .empty-tips {
+  background-color: #17171a;
+  border-color: #2a2a2e;
+  color: #a3a3a3;
+}

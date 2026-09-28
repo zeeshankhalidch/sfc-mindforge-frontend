@@ -689,30 +689,6 @@ body.dark-mode .budget-percent {
   color: #f3f4f6 !important;
 }
 
-body.dark-mode .top-category span {
-  color: #a3a3a3 !important;
-}
-
-body.dark-mode .top-category strong {
-  color: #f3f4f6 !important;
-}
-
-body.dark-mode .top-category p {
-  color: #a3a3a3 !important;
-}
-
-body.dark-mode .saving-tip strong {
-  color: #f3f4f6 !important;
-}
-
-body.dark-mode .saving-tip p {
-  color: #a3a3a3 !important;
-}
-
-body.dark-mode .saving-tip a {
-  color: #d4af37 !important;
-}
-
 body.dark-mode input,
 body.dark-mode select,
 body.dark-mode textarea {
@@ -1360,4 +1336,20 @@ body.dark-mode .profile-page,
 body.dark-mode .admin-dashboard-page {
   background-color: #0a0a0a !important;
   min-height: 100vh;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+}
+
+body.dark-mode,
+body.dark-mode #root,
+body.dark-mode .dashboard-layout,
+body.dark-mode .dashboard-main,
+body.dark-mode .dashboard-content,
+body.dark-mode .admin-layout,
+body.dark-mode .admin-content {
+  background-color: #0a0a0a !important;
 }
