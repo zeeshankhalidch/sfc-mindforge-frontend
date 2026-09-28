@@ -2,7 +2,6 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import {
   ArrowLeftRight,
   ChartNoAxesColumnIncreasing,
-  CircleDollarSign,
   LayoutDashboard,
   Lightbulb,
   LogOut,
@@ -43,10 +42,8 @@ function Sidebar({ isOpen, closeSidebar }) {
       <aside className={`sidebar ${isOpen ? "sidebar-open" : ""}`}>
         <div className="sidebar-header">
           <Link to="/dashboard" className="sidebar-brand" onClick={closeSidebar}>
-            <span className="sidebar-logo">
-              <CircleDollarSign size={22} />
-            </span>
-            <div>
+            <span className="sidebar-logo">CC</span>
+            <div className="sidebar-brand-text">
               <strong>Campus Coin</strong>
               <small>Student Finance</small>
             </div>

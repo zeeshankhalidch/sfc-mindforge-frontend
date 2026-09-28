@@ -4,102 +4,138 @@
   left: 0;
   z-index: 1100;
   display: flex;
-  width: 235px;
+  width: 240px;
   height: 100vh;
   flex-direction: column;
-  color: #fff;
-  background-color: var(--primary);
+  color: #e5e5e5;
+  background-color: #0f0f0f;
+  border-right: 1px solid #1f1f1f;
 }
 
 .sidebar-header {
   display: flex;
-  height: 70px;
-  padding: 0 18px;
+  height: 76px;
+  padding: 0 20px;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid #1f1f1f;
 }
 
 .sidebar-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: #fff;
+  gap: 12px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .sidebar-brand:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 .sidebar-logo {
   display: flex;
-  width: 35px;
-  height: 35px;
+  width: 38px;
+  height: 38px;
   align-items: center;
   justify-content: center;
-  color: var(--primary);
-  background-color: #fff;
-  border-radius: 50%;
+  color: #0f0f0f;
+  background-color: #d4af37;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  border-radius: 8px;
+  flex-shrink: 0;
 }
 
-.sidebar-brand strong,
-.sidebar-brand small {
-  display: block;
+.sidebar-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
 }
 
 .sidebar-brand strong {
-  font-size: 0.9rem;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.2px;
 }
 
 .sidebar-brand small {
-  color: #e9cbd5;
-  font-size: 0.65rem;
+  color: #a3a3a3;
+  font-size: 10px;
+  letter-spacing: 0.3px;
+  margin-top: 2px;
 }
 
 .sidebar-close {
   display: none;
-  color: #fff;
+  color: #e5e5e5;
   background: none;
   border: none;
   cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.sidebar-close:hover {
+  background: #1f1f1f;
 }
 
 .sidebar-nav {
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 4px;
-  padding: 18px 12px;
+  gap: 2px;
+  padding: 20px 12px;
   overflow-y: auto;
 }
 
+.sidebar-nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 3px;
+}
+
 .sidebar-link {
+  position: relative;
   display: flex;
-  padding: 11px 13px;
+  padding: 11px 14px;
   align-items: center;
-  gap: 11px;
-  color: #f5e7ec;
-  border-radius: 7px;
-  font-size: 0.82rem;
+  gap: 12px;
+  color: #a3a3a3;
+  border-radius: 8px;
+  font-size: 13.5px;
   font-weight: 500;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s;
+  transition: all 0.2s ease;
 }
 
 .sidebar-link:hover {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: #f5d572;
+  background-color: rgba(212, 175, 55, 0.06);
 }
 
 .sidebar-link.active {
-  color: var(--primary);
-  background-color: var(--primary-light);
+  color: #0f0f0f;
+  background-color: #d4af37;
+  font-weight: 600;
 }
 
-/* ============ LOGOUT BUTTON (STUDENT) ============ */
+.sidebar-link.active svg {
+  color: #0f0f0f;
+}
+
 .sidebar-footer {
   padding: 16px 12px 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid #1f1f1f;
 }
 
 .sidebar-logout {
@@ -110,41 +146,35 @@
   width: 100%;
   padding: 11px 16px;
   background: transparent;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #d4af37;
+  border: 1.5px solid #d4af37;
   border-radius: 8px;
-  font-size: 0.85rem;
+  font-size: 13px;
   font-weight: 600;
   font-family: inherit;
+  letter-spacing: 0.3px;
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
 }
 
 .sidebar-logout svg {
-  color: #ffffff;
+  color: #d4af37;
   transition: color 0.2s ease;
 }
 
 .sidebar-logout:hover {
-  background: #ffffff;
-  color: var(--primary);
-  border-color: #ffffff;
+  background: #d4af37;
+  color: #0f0f0f;
+  border-color: #d4af37;
 }
 
 .sidebar-logout:hover svg {
-  color: var(--primary);
+  color: #0f0f0f;
 }
 
 .sidebar-logout:active {
-  background: #f5f5f5;
-  color: var(--primary);
-  border-color: #f5f5f5;
   transform: scale(0.98);
-}
-
-.sidebar-logout:active svg {
-  color: var(--primary);
 }
 
 .sidebar-overlay {
@@ -162,7 +192,9 @@
   }
 
   .sidebar-close {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .sidebar-overlay {
@@ -172,14 +204,14 @@
     display: block;
     width: 100%;
     height: 100%;
-    background-color: rgba(31, 41, 55, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     border: none;
   }
 }
 
 @media (max-width: 576px) {
   .sidebar {
-    width: 270px;
+    width: 275px;
     max-width: 85%;
   }
 }

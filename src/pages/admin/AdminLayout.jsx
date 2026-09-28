@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import {
   ChartNoAxesColumnIncreasing,
-  CircleDollarSign,
   FolderCog,
   LayoutDashboard,
   LogOut,
@@ -10,6 +9,7 @@ import {
   Menu,
   MessagesSquare,
   Settings,
+  ShieldCheck,
   UsersRound,
   X,
 } from "lucide-react";
@@ -22,7 +22,6 @@ function AdminLayout() {
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // ✅ ADMIN DARK MODE — apni preference apply karo
   useEffect(() => {
     const prefs = JSON.parse(
       localStorage.getItem("admin_preferences") || "{}"
@@ -34,7 +33,6 @@ function AdminLayout() {
       document.body.classList.remove("dark-mode");
     }
 
-    // Cleanup: unmount pe dark-mode hata do
     return () => {
       document.body.classList.remove("dark-mode");
     };
@@ -64,18 +62,16 @@ function AdminLayout() {
         </button>
 
         <div className="admin-mobile-brand">
-          <CircleDollarSign size={21} />
-          <span>Campus Coin</span>
+          <span className="admin-mobile-brand-mark">CC</span>
+          <span className="admin-mobile-brand-text">Campus Coin</span>
         </div>
       </header>
 
       <aside className={`admin-sidebar ${sidebarOpen ? "admin-sidebar-open" : ""}`}>
         <div className="admin-sidebar-header">
           <div className="admin-brand">
-            <span className="admin-brand-logo">
-              <CircleDollarSign size={22} />
-            </span>
-            <div>
+            <span className="admin-brand-logo">CC</span>
+            <div className="admin-brand-text">
               <strong>Campus Coin</strong>
               <span>Administrator</span>
             </div>
@@ -89,6 +85,11 @@ function AdminLayout() {
           >
             <X size={20} />
           </button>
+        </div>
+
+        <div className="admin-sidebar-badge">
+          <ShieldCheck size={14} />
+          <span>Admin Access</span>
         </div>
 
         <nav>
@@ -128,10 +129,12 @@ function AdminLayout() {
           </NavLink>
         </nav>
 
-        <button type="button" className="admin-logout" onClick={handleLogout}>
-          <LogOut size={18} />
-          Logout
-        </button>
+        <div className="admin-sidebar-footer">
+          <button type="button" className="admin-logout" onClick={handleLogout}>
+            <LogOut size={18} />
+            Logout
+          </button>
+        </div>
       </aside>
 
       {sidebarOpen && (

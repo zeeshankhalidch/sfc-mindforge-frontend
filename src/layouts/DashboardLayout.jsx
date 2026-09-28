@@ -23,7 +23,6 @@ function DashboardLayout() {
     }
   }, []);
 
-  // Har route change pe unread count refresh karo
   useEffect(() => {
     fetchUnread();
   }, [location.pathname]);
@@ -32,9 +31,7 @@ function DashboardLayout() {
     try {
       const res = await API.get("/notifications/unread-count");
       setUnreadCount(res.data.count || 0);
-    } catch (error) {
-      // silent fail
-    }
+    } catch (error) {}
   };
 
   const handleNotificationClick = () => {
@@ -42,6 +39,7 @@ function DashboardLayout() {
   };
 
   const avatarLetter = user?.name?.charAt(0)?.toUpperCase() || "U";
+  const firstName = user?.name?.split(" ")[0] || "Student";
 
   return (
     <div className="dashboard-layout">
@@ -62,7 +60,10 @@ function DashboardLayout() {
               <Menu size={22} />
             </button>
 
-            <span>Campus Coin</span>
+            <div className="dashboard-header-text">
+              <span className="dashboard-header-label">Welcome back</span>
+              <span className="dashboard-header-name">{firstName}</span>
+            </div>
           </div>
 
           <div className="dashboard-header-right">
