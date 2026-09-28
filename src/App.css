@@ -73,10 +73,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.85rem;
 }
 
-/* ============================================================
-   STUDENT SIDEBAR
-   ============================================================ */
-
 .sidebar {
   background-color: #0a0a0a !important;
   border-right: 1px solid #1f1f1f !important;
@@ -167,10 +163,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #0a0a0a !important;
 }
 
-/* ============================================================
-   ADMIN SIDEBAR
-   ============================================================ */
-
 .admin-sidebar {
   background-color: #0a0a0a !important;
   border-right: 1px solid #1f1f1f !important;
@@ -258,9 +250,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #0a0a0a !important;
 }
 
-/* ============================================================
-   HEADERS
-   ============================================================ */
+.admin-sidebar-badge {
+  background: rgba(212, 175, 55, 0.1) !important;
+  border: 1px solid rgba(212, 175, 55, 0.25) !important;
+  color: #d4af37 !important;
+}
 
 .dashboard-header {
   background-color: #ffffff !important;
@@ -328,10 +322,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #d4af37 !important;
 }
 
-/* ============================================================
-   BUTTONS
-   ============================================================ */
-
 .primary-button,
 .primary-action,
 .auth-submit,
@@ -381,10 +371,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff !important;
 }
 
-/* ============================================================
-   CARDS & PANELS
-   ============================================================ */
-
 .summary-card,
 .dashboard-panel,
 .report-card,
@@ -416,10 +402,6 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px !important;
 }
 
-/* ============================================================
-   INPUTS
-   ============================================================ */
-
 input, select, textarea {
   font-family: "Inter", sans-serif !important;
   border-radius: 8px !important;
@@ -430,10 +412,6 @@ input:focus, select:focus, textarea:focus {
   box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15) !important;
   outline: none !important;
 }
-
-/* ============================================================
-   PROGRESS BARS
-   ============================================================ */
 
 .progress-fill,
 .budget-progress-fill {
@@ -451,10 +429,6 @@ input:focus, select:focus, textarea:focus {
   background-color: #dc2626 !important;
 }
 
-/* ============================================================
-   BREADCRUMBS
-   ============================================================ */
-
 .breadcrumb-home {
   color: #d4af37 !important;
 }
@@ -468,12 +442,120 @@ input:focus, select:focus, textarea:focus {
   color: #1a1a1a !important;
 }
 
-/* ============================================================
-   DARK MODE — GLOBAL
-   ============================================================ */
+.admin-category-form button,
+.template-form button[type="submit"],
+.ann-form button[type="submit"],
+.settings-form button[type="submit"],
+.settings-edit-btn,
+.settings-save-btn {
+  background-color: #d4af37 !important;
+  color: #0a0a0a !important;
+  border: 1px solid #d4af37 !important;
+  border-radius: 8px !important;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 700 !important;
+  transition: all 0.2s ease !important;
+}
+
+.admin-category-form button:hover,
+.template-form button[type="submit"]:hover,
+.ann-form button[type="submit"]:hover,
+.settings-form button[type="submit"]:hover,
+.settings-edit-btn:hover,
+.settings-save-btn:hover {
+  background-color: #0a0a0a !important;
+  color: #d4af37 !important;
+  border-color: #0a0a0a !important;
+}
+
+.user-row button,
+.admin-category-list button,
+.template-list button,
+.ann-item-actions button {
+  background: transparent !important;
+  color: #0a0a0a !important;
+  border: 1px solid #ede8dd !important;
+  border-radius: 6px !important;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.user-row button:hover,
+.admin-category-list button:hover,
+.template-list button:hover,
+.ann-item-actions button:hover {
+  background: #0a0a0a !important;
+  color: #d4af37 !important;
+  border-color: #0a0a0a !important;
+}
+
+.user-row button:last-child,
+.admin-category-list button:last-child,
+.ann-item-actions button:last-child {
+  color: #dc2626 !important;
+  border-color: #fecaca !important;
+}
+
+.user-row button:last-child:hover,
+.admin-category-list button:last-child:hover,
+.ann-item-actions button:last-child:hover {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  border-color: #dc2626 !important;
+}
+
+.users-head {
+  background-color: #faf8f5 !important;
+  color: #737373 !important;
+  border-bottom: 1px solid #ede8dd !important;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+}
+
+.user-row {
+  border-bottom: 1px solid #ede8dd !important;
+}
+
+.user-row:last-child {
+  border-bottom: none !important;
+}
+
+.user-row strong {
+  color: #1a1a1a !important;
+  font-family: "Archivo", sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.user-row span {
+  color: #525252 !important;
+}
+
+.user-search {
+  background-color: #ffffff !important;
+  border: 1px solid #ede8dd !important;
+  border-radius: 8px !important;
+}
+
+.user-search input {
+  background: transparent !important;
+  border: none !important;
+  color: #1a1a1a !important;
+  font-family: "Inter", sans-serif !important;
+}
+
+.user-search input::placeholder {
+  color: #a8a29e !important;
+}
+
+.user-search svg {
+  color: #d4af37 !important;
+}
 
 body.dark-mode {
-  background-color: #0f0f0f !important;
+  background-color: #0a0a0a !important;
   color: #f3f4f6 !important;
 }
 
@@ -481,7 +563,7 @@ body.dark-mode .dashboard-header,
 body.dark-mode .dashboard-content,
 body.dark-mode .admin-content,
 body.dark-mode .admin-mobile-header {
-  background-color: #0f0f0f !important;
+  background-color: #0a0a0a !important;
   border-color: #1f1f1f !important;
 }
 
@@ -492,13 +574,6 @@ body.dark-mode h4,
 body.dark-mode h5,
 body.dark-mode h6 {
   color: #f3f4f6 !important;
-}
-
-body.dark-mode p,
-body.dark-mode span,
-body.dark-mode label,
-body.dark-mode small {
-  color: #f3f4f6;
 }
 
 body.dark-mode .dashboard-header-left > span {
@@ -528,8 +603,6 @@ body.dark-mode .profile-avatar {
   color: #0a0a0a !important;
   border-color: #d4af37 !important;
 }
-
-/* ========== DARK MODE — CARDS ========== */
 
 body.dark-mode .summary-card,
 body.dark-mode .dashboard-panel,
@@ -568,8 +641,6 @@ body.dark-mode .page-heading p {
   color: #a3a3a3 !important;
 }
 
-/* ========== DARK MODE — SUMMARY CARDS ========== */
-
 body.dark-mode .summary-label {
   color: #a3a3a3 !important;
 }
@@ -593,8 +664,6 @@ body.dark-mode .summary-change.negative {
 body.dark-mode .summary-change.goal {
   color: #d4af37 !important;
 }
-
-/* ========== DARK MODE — PANELS ========== */
 
 body.dark-mode .panel-heading h3 {
   color: #f3f4f6 !important;
@@ -644,8 +713,6 @@ body.dark-mode .saving-tip a {
   color: #d4af37 !important;
 }
 
-/* ========== DARK MODE — INPUTS ========== */
-
 body.dark-mode input,
 body.dark-mode select,
 body.dark-mode textarea {
@@ -659,8 +726,6 @@ body.dark-mode textarea::placeholder {
   color: #6b7280 !important;
 }
 
-/* ========== DARK MODE — REPORT FILTERS ========== */
-
 body.dark-mode .report-filters {
   background: #17171a !important;
   border-color: #2a2a2e !important;
@@ -670,11 +735,6 @@ body.dark-mode .report-filters select {
   background-color: #1f1f24 !important;
   color: #f3f4f6 !important;
   border-color: #2f2f36 !important;
-}
-
-body.dark-mode .report-filters select option {
-  background-color: #1f1f24 !important;
-  color: #f3f4f6 !important;
 }
 
 body.dark-mode .report-actions button {
@@ -708,8 +768,6 @@ body.dark-mode .report-card h3 {
 body.dark-mode .report-card p {
   color: #a3a3a3 !important;
 }
-
-/* ========== DARK MODE — INSIGHTS ========== */
 
 body.dark-mode .insight-banner {
   background-color: #17171a !important;
@@ -747,8 +805,6 @@ body.dark-mode .insight-advice span {
   color: #a3a3a3 !important;
 }
 
-/* ========== DARK MODE — SAVING TIPS ========== */
-
 body.dark-mode .tips-intro {
   background-color: #17171a !important;
   color: #f3f4f6 !important;
@@ -776,8 +832,6 @@ body.dark-mode .tip-card-actions button:hover {
   color: #d4af37 !important;
 }
 
-/* ========== DARK MODE — TABS ========== */
-
 body.dark-mode .transaction-tabs button {
   color: #a3a3a3 !important;
 }
@@ -800,8 +854,6 @@ body.dark-mode .notif-filters button.active {
   color: #0a0a0a !important;
 }
 
-/* ========== DARK MODE — BUTTONS ========== */
-
 body.dark-mode .primary-button,
 body.dark-mode .primary-action,
 body.dark-mode .auth-submit,
@@ -809,9 +861,9 @@ body.dark-mode .budget-add-button,
 body.dark-mode .budget-form button,
 body.dark-mode .category-save,
 body.dark-mode .profile-save {
-  background-color: #0a0a0a !important;
-  color: #ffffff !important;
-  border-color: #0a0a0a !important;
+  background-color: #d4af37 !important;
+  color: #0a0a0a !important;
+  border-color: #d4af37 !important;
 }
 
 body.dark-mode .primary-button:hover,
@@ -821,9 +873,9 @@ body.dark-mode .budget-add-button:hover,
 body.dark-mode .budget-form button:hover,
 body.dark-mode .category-save:hover,
 body.dark-mode .profile-save:hover {
-  background-color: #d4af37 !important;
+  background-color: #b8941f !important;
   color: #0a0a0a !important;
-  border-color: #d4af37 !important;
+  border-color: #b8941f !important;
 }
 
 body.dark-mode .secondary-button {
@@ -837,8 +889,6 @@ body.dark-mode .secondary-button:hover {
   border-color: #d4af37 !important;
   color: #d4af37 !important;
 }
-
-/* ========== DARK MODE — PROFILE ========== */
 
 body.dark-mode .profile-field label {
   color: #f3f4f6 !important;
@@ -875,8 +925,6 @@ body.dark-mode .font-options button.active {
   border-color: #d4af37 !important;
 }
 
-/* ========== DARK MODE — CHARTS ========== */
-
 body.dark-mode .recharts-cartesian-grid line {
   stroke: #2a2a2e !important;
 }
@@ -890,7 +938,14 @@ body.dark-mode .recharts-legend-item-text {
   color: #a3a3a3 !important;
 }
 
-/* ========== DARK MODE — ADMIN PANEL ========== */
+body.dark-mode .recharts-bar-rectangle path,
+body.dark-mode .recharts-bar-rectangle rect {
+  fill: #d4af37 !important;
+}
+
+body.dark-mode .recharts-pie-sector path {
+  stroke: #0a0a0a !important;
+}
 
 body.dark-mode .admin-panel h2 {
   color: #f3f4f6 !important;
@@ -925,12 +980,54 @@ body.dark-mode .user-row span {
 }
 
 body.dark-mode .users-head {
+  background-color: #1a1a1f !important;
   color: #a3a3a3 !important;
   border-color: #2a2a2e !important;
 }
 
 body.dark-mode .user-row {
   border-color: #2a2a2e !important;
+}
+
+body.dark-mode .user-search {
+  background-color: #17171a !important;
+  border-color: #2a2a2e !important;
+}
+
+body.dark-mode .user-search input {
+  background: transparent !important;
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .user-search input::placeholder {
+  color: #6b7280 !important;
+}
+
+body.dark-mode .user-search svg {
+  color: #d4af37 !important;
+}
+
+body.dark-mode .user-row button {
+  background: transparent !important;
+  color: #d4af37 !important;
+  border: 1px solid #2a2a2e !important;
+}
+
+body.dark-mode .user-row button:hover {
+  background: #d4af37 !important;
+  color: #0a0a0a !important;
+  border-color: #d4af37 !important;
+}
+
+body.dark-mode .user-row button:last-child {
+  color: #f87171 !important;
+  border-color: #7f1d1d !important;
+}
+
+body.dark-mode .user-row button:last-child:hover {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  border-color: #dc2626 !important;
 }
 
 body.dark-mode .admin-category-list > div {
@@ -942,8 +1039,33 @@ body.dark-mode .admin-category-list span {
   color: #f3f4f6 !important;
 }
 
+body.dark-mode .admin-category-list button {
+  background: transparent !important;
+  color: #d4af37 !important;
+  border: 1px solid #2a2a2e !important;
+}
+
+body.dark-mode .admin-category-list button:hover {
+  background: #d4af37 !important;
+  color: #0a0a0a !important;
+}
+
+body.dark-mode .admin-category-list button:last-child {
+  color: #f87171 !important;
+  border-color: #7f1d1d !important;
+}
+
+body.dark-mode .admin-category-list button:last-child:hover {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+}
+
 body.dark-mode .template-list article h2 {
   color: #f3f4f6 !important;
+}
+
+body.dark-mode .template-list article p {
+  color: #a3a3a3 !important;
 }
 
 body.dark-mode .ann-item h3 {
@@ -952,6 +1074,37 @@ body.dark-mode .ann-item h3 {
 
 body.dark-mode .ann-item p {
   color: #a3a3a3 !important;
+}
+
+body.dark-mode .ann-item {
+  border-left-color: #d4af37 !important;
+}
+
+body.dark-mode .ann-item-actions .ann-btn-toggle {
+  color: #d4af37 !important;
+}
+
+body.dark-mode .ann-item-actions .ann-btn-toggle:hover {
+  background: rgba(212, 175, 55, 0.15) !important;
+}
+
+body.dark-mode .ann-item-actions .ann-btn-delete {
+  color: #f87171 !important;
+}
+
+body.dark-mode .ann-item-actions .ann-btn-delete:hover {
+  background: rgba(220, 38, 38, 0.15) !important;
+}
+
+body.dark-mode .ann-form button[type="submit"] {
+  background-color: #d4af37 !important;
+  color: #0a0a0a !important;
+  border-color: #d4af37 !important;
+}
+
+body.dark-mode .ann-form button[type="submit"]:hover {
+  background-color: #b8941f !important;
+  color: #0a0a0a !important;
 }
 
 body.dark-mode .settings-item-content label {
@@ -964,7 +1117,39 @@ body.dark-mode .settings-value {
   border-color: #2f2f36 !important;
 }
 
-/* ========== DARK MODE — BREADCRUMBS ========== */
+body.dark-mode .settings-edit-btn,
+body.dark-mode .settings-save-btn,
+body.dark-mode .admin-category-form button,
+body.dark-mode .template-form button[type="submit"],
+body.dark-mode .settings-form button[type="submit"] {
+  background-color: #d4af37 !important;
+  color: #0a0a0a !important;
+  border-color: #d4af37 !important;
+}
+
+body.dark-mode .settings-edit-btn:hover,
+body.dark-mode .settings-save-btn:hover,
+body.dark-mode .admin-category-form button:hover,
+body.dark-mode .template-form button[type="submit"]:hover,
+body.dark-mode .settings-form button[type="submit"]:hover {
+  background-color: #b8941f !important;
+  color: #0a0a0a !important;
+  border-color: #b8941f !important;
+}
+
+body.dark-mode .settings-del-btn,
+body.dark-mode .settings-cancel-btn {
+  background: transparent !important;
+  color: #f87171 !important;
+  border: 1px solid #7f1d1d !important;
+}
+
+body.dark-mode .settings-del-btn:hover,
+body.dark-mode .settings-cancel-btn:hover {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  border-color: #dc2626 !important;
+}
 
 body.dark-mode .breadcrumb-item {
   color: #a3a3a3 !important;
@@ -987,7 +1172,155 @@ body.dark-mode .breadcrumb-sep {
   color: #6b7280 !important;
 }
 
-/* ========== RESPONSIVE ========== */
+body.dark-mode .admin-appearance-card {
+  background: #17171a !important;
+  border-color: #2a2a2e !important;
+}
+
+body.dark-mode .admin-appearance-text strong {
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .admin-appearance-text span {
+  color: #a3a3a3 !important;
+}
+
+body.dark-mode .admin-appearance-icon {
+  background: rgba(212, 175, 55, 0.15) !important;
+  color: #d4af37 !important;
+}
+
+body.dark-mode .admin-switch span {
+  background-color: #2f2f36 !important;
+}
+
+body.dark-mode .admin-switch input:checked + span {
+  background-color: #d4af37 !important;
+}
+
+body.dark-mode .budget-delete-btn {
+  color: #f87171 !important;
+  border-color: #7f1d1d !important;
+}
+
+body.dark-mode .budget-delete-btn:hover {
+  background: rgba(220, 38, 38, 0.2) !important;
+  border-color: #f87171 !important;
+}
+
+body.dark-mode .budget-progress-track {
+  background-color: #2a2a2e !important;
+}
+
+body.dark-mode .budget-status.status-good {
+  color: #4ade80 !important;
+  background-color: rgba(22, 163, 74, 0.15) !important;
+}
+
+body.dark-mode .budget-status.status-warning {
+  color: #fbbf24 !important;
+  background-color: rgba(217, 119, 6, 0.15) !important;
+}
+
+body.dark-mode .budget-status.status-danger {
+  color: #f87171 !important;
+  background-color: rgba(220, 38, 38, 0.15) !important;
+}
+
+body.dark-mode .budget-alert {
+  color: #f87171 !important;
+  background-color: rgba(220, 38, 38, 0.15) !important;
+  border-color: #7f1d1d !important;
+}
+
+body.dark-mode .transaction-table th {
+  background-color: #1a1a1f !important;
+  color: #a3a3a3 !important;
+  border-color: #2a2a2e !important;
+}
+
+body.dark-mode .transaction-table td {
+  color: #f3f4f6 !important;
+  border-color: #2a2a2e !important;
+}
+
+body.dark-mode .transaction-search {
+  border-color: #2a2a2e !important;
+  background-color: #1f1f24 !important;
+}
+
+body.dark-mode .transaction-search input {
+  background: transparent !important;
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .empty-table {
+  color: #a3a3a3 !important;
+}
+
+body.dark-mode .modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+body.dark-mode .transaction-modal {
+  background-color: #17171a !important;
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .modal-heading h2 {
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .modal-field label {
+  color: #d1d5db !important;
+}
+
+body.dark-mode .type-selector span {
+  color: #d1d5db !important;
+  border-color: #2f2f36 !important;
+}
+
+body.dark-mode .recurring-check {
+  color: #d1d5db !important;
+}
+
+body.dark-mode .notif-item {
+  background-color: #17171a !important;
+  border-color: #2a2a2e !important;
+}
+
+body.dark-mode .notif-item h3 {
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .notif-content p {
+  color: #a3a3a3 !important;
+}
+
+body.dark-mode .notif-empty {
+  background-color: #17171a !important;
+  color: #a3a3a3 !important;
+}
+
+body.dark-mode .notif-empty h3 {
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .category-field label {
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .category-row {
+  border-color: #2a2a2e !important;
+}
+
+body.dark-mode .category-name span {
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .category-group h2 {
+  color: #f3f4f6 !important;
+}
 
 @media (max-width: 700px) {
   .page-heading {
