@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Users, Shield, Smartphone, Heart, Mail, MapPin, Github, Twitter, Linkedin } from "lucide-react";
+import { Users, Shield, Smartphone, Heart, Mail, MapPin, Globe, Send, MessageCircle } from "lucide-react";
 import logoImg from "../../assets/images/tech.png";
 import "./Footer.css";
 
@@ -63,9 +63,9 @@ function Footer() {
             Built for campuses worldwide
           </span>
           <div className="lux-footer-socials">
-            <a href="#" aria-label="Github"><Github size={16} /></a>
-            <a href="#" aria-label="Twitter"><Twitter size={16} /></a>
-            <a href="#" aria-label="LinkedIn"><Linkedin size={16} /></a>
+            <a href="#" aria-label="Website"><Globe size={16} /></a>
+            <a href="#" aria-label="Newsletter"><Send size={16} /></a>
+            <a href="#" aria-label="Support"><MessageCircle size={16} /></a>
           </div>
         </div>
       </div>
