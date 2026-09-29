@@ -38,7 +38,6 @@ function Reports() {
   const [exporting, setExporting] = useState(false);
   const [emailing, setEmailing] = useState(false);
 
-  // ✅ FILTERS
   const [filters, setFilters] = useState({
     dateRange: "thisMonth",
     category: "all",
@@ -54,12 +53,10 @@ function Reports() {
     fetchAllCategories();
   }, []);
 
-  // ✅ FILTER CHANGE PE SUMMARY + PIE REFRESH
   useEffect(() => {
     if (!loading) {
       fetchFilteredData();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);
 
   const fetchAllCategories = async () => {
@@ -98,7 +95,6 @@ function Reports() {
     try {
       setLoading(true);
 
-      // 1. Income vs Expense (6 months)
       const trendRes = await API.get("/reports/income-expense");
       const map = {};
       (trendRes.data.data || []).forEach((item) => {
@@ -116,7 +112,6 @@ function Reports() {
       });
       setMonthly(formatted);
 
-      // 2. Daily summary (week)
       const dailyRes = await API.get("/reports/daily");
       const daily = dailyRes.data.data || [];
       const dayMap = {};
@@ -129,7 +124,6 @@ function Reports() {
       }));
       setWeekly(last7);
 
-      // 3. Filtered data
       await fetchFilteredData();
     } catch (error) {
       toast.error(error.response?.data?.message || "Failed to load reports");
@@ -138,7 +132,6 @@ function Reports() {
     }
   };
 
-  // ✅ FILTERED DATA (summary + pie)
   const fetchFilteredData = async () => {
     try {
       const { from, to } = computeDateRange();
@@ -179,7 +172,6 @@ function Reports() {
       }));
       setCategories(catData);
     } catch (error) {
-      // silent
     }
   };
 
@@ -196,7 +188,6 @@ function Reports() {
     filters.category !== "all" ||
     filters.type !== "all";
 
-  // ============ CAPTURE CANVAS (no flicker) ============
   const captureCanvas = async () => {
     if (!reportRef.current) throw new Error("Report not ready");
 
@@ -339,7 +330,6 @@ function Reports() {
     }
   };
 
-  // ✅ SHARE VIA EMAIL
   const shareByEmail = async () => {
     if (emailing) return;
     setEmailing(true);
@@ -420,7 +410,6 @@ function Reports() {
         </div>
       </div>
 
-      {/* ✅ FILTER BAR */}
       <div className="report-filters">
         <select
           value={filters.dateRange}
@@ -465,7 +454,6 @@ function Reports() {
         )}
       </div>
 
-      {/* ✅ YE WRAPPER CAPTURE HOGA */}
       <div ref={reportRef} className="report-export-area">
         <div className="report-export-header">
           <h2>Campus Coin — Financial Report</h2>

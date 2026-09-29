@@ -3,7 +3,6 @@ import { Toaster } from "react-hot-toast";
 
 import ProtectedRoute from "./components/ProtectedRoute";
 
-// Student Pages
 import Home from "./pages/Home/Home.jsx";
 import Login from "./pages/Auth/Login.jsx";
 import Register from "./pages/Auth/Register.jsx";
@@ -20,7 +19,6 @@ import Categories from "./pages/Categories/Categories.jsx";
 import Profile from "./pages/Profile/Profile.jsx";
 import Notifications from "./pages/Notifications/Notifications.jsx";
 
-// Admin Pages
 import AdminLogin from "./pages/admin/AdminLogin/AdminLogin.jsx";
 import AdminLayout from "./pages/admin/AdminLayout.jsx";
 import AdminDashboard from "./pages/admin/AdminDashboard/AdminDashboard.jsx";
@@ -37,7 +35,6 @@ function App() {
   return (
     <>
       <Routes>
-        {/* PUBLIC ROUTES */}
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
@@ -45,7 +42,6 @@ function App() {
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/admin/login" element={<AdminLogin />} />
 
-        {/* STUDENT PROTECTED ROUTES */}
         <Route element={<ProtectedRoute role="student"><DashboardLayout /></ProtectedRoute>}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/transactions" element={<Transactions />} />
@@ -58,7 +54,6 @@ function App() {
           <Route path="/notifications" element={<Notifications />} />
         </Route>
 
-        {/* ADMIN PROTECTED ROUTES */}
         <Route element={<ProtectedRoute role="admin"><AdminLayout /></ProtectedRoute>}>
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/admin/users" element={<Users />} />

@@ -42,7 +42,7 @@ function Notifications() {
   const navigate = useNavigate();
   const [notifications, setNotifications] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [filter, setFilter] = useState("all"); // all | unread
+  const [filter, setFilter] = useState("all");
 
   useEffect(() => {
     if (!localStorage.getItem("token")) {
@@ -56,14 +56,11 @@ function Notifications() {
     try {
       setLoading(true);
 
-      // ✅ Pehle budget alerts refresh karo (silent fail allowed)
       try {
         await API.post("/notifications/refresh-budget-alerts");
       } catch (e) {
-        // ignore — agar fail ho to notifications list still load hogi
       }
 
-      // Phir notifications fetch karo
       const res = await API.get("/notifications");
       setNotifications(res.data.notifications || []);
     } catch (error) {

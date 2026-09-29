@@ -74,7 +74,6 @@ function Transactions() {
     return matchesType && matchesSearch;
   });
 
-  // ============ AI CATEGORIZATION ============
   useEffect(() => {
     if (!description || description.trim().length < 3) {
       setAiSuggestion(null);
@@ -91,7 +90,6 @@ function Transactions() {
           setAiSuggestion(null);
         }
       } catch (error) {
-        // silent fail
       } finally {
         setAiLoading(false);
       }
@@ -107,7 +105,6 @@ function Transactions() {
     }
   };
 
-  // ============ ADD TRANSACTION ============
   const addTransaction = async (event) => {
     event.preventDefault();
     const formElement = event.currentTarget;
@@ -169,7 +166,6 @@ function Transactions() {
     }
   };
 
-  // ============ CSV IMPORT ============
   const parseCSV = (text) => {
     const lines = text.trim().split("\n");
     if (lines.length < 2) return [];
@@ -382,7 +378,6 @@ function Transactions() {
         </table>
       </div>
 
-      {/* ============ ADD TRANSACTION MODAL ============ */}
       {modalOpen && (
         <div className="modal-backdrop">
           <div className="transaction-modal">
@@ -429,7 +424,6 @@ function Transactions() {
                   onChange={(e) => setDescription(e.target.value)}
                 />
 
-                {/* AI Suggestion Box */}
                 {aiLoading && (
                   <div className="ai-loading">
                     <Loader2 size={14} className="spin" />
@@ -514,7 +508,6 @@ function Transactions() {
         </div>
       )}
 
-      {/* ============ CSV IMPORT MODAL ============ */}
       {csvModalOpen && (
         <div className="modal-backdrop">
           <div className="transaction-modal">

@@ -54,8 +54,6 @@
   flex-shrink: 0;
 }
 
-/* ============ DARK MODE ============ */
-
 body.dark-mode .breadcrumb-item {
   color: #b1b5bd;
 }

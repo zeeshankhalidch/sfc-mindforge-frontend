@@ -28,12 +28,10 @@ function Breadcrumbs({ variant = "student" }) {
   const homeLabel = isAdmin ? "Admin" : "Home";
   const homePath = isAdmin ? "/admin/dashboard" : "/dashboard";
 
-  // Admin variant: "admin" prefix hatao
   if (isAdmin) {
     segments = segments.filter((s) => s !== "admin");
   }
 
-  // "dashboard" ko skip karo kyunki Home link already wahi hai
   const displaySegments = segments.filter((s) => s !== "dashboard");
 
   return (

@@ -25,7 +25,6 @@ function Profile() {
       return;
     }
 
-    // ✅ Student preferences read karo
     const prefs = JSON.parse(
       localStorage.getItem("student_preferences") || "{}"
     );
@@ -35,7 +34,6 @@ function Profile() {
     fetchProfile();
   }, []);
 
-  // ✅ Turant apply + save karo student_preferences mein
   useEffect(() => {
     document.body.classList.toggle("dark-mode", darkMode);
     document.documentElement.style.fontSize =

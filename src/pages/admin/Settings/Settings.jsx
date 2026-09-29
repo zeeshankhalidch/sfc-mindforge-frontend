@@ -22,11 +22,9 @@ function Settings() {
   const [editKey, setEditKey] = useState("");
   const [editValue, setEditValue] = useState("");
 
-  // ✅ ADMIN dark mode (separate from student)
   const [adminDarkMode, setAdminDarkMode] = useState(false);
 
   useEffect(() => {
-    // Admin preferences load karo
     const prefs = JSON.parse(
       localStorage.getItem("admin_preferences") || "{}"
     );
@@ -35,7 +33,6 @@ function Settings() {
     fetchSettings();
   }, []);
 
-  // ✅ Admin dark mode apply + save
   useEffect(() => {
     document.body.classList.toggle("dark-mode", adminDarkMode);
     localStorage.setItem(

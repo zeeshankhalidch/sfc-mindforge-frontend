@@ -28,7 +28,6 @@ function AdminLogin() {
       const response = await API.post("/auth/login", { email, password });
       const { token, user } = response.data;
 
-      // ✅ Check role — sirf admin allow
       if (user.role !== "admin") {
         toast.error("Access denied. Admin only.");
         return;
