@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Users, Shield, Smartphone, Heart } from "lucide-react";
+import { Users, Shield, Smartphone, Heart, Mail, MapPin, Github, Twitter, Linkedin } from "lucide-react";
+import logoImg from "../../assets/images/tech.png";
 import "./Footer.css";
 
 function Footer() {
@@ -28,11 +29,13 @@ function Footer() {
 
       <div className="lux-footer-main">
         <div className="lux-footer-brand">
-          <span className="lux-footer-logo">
-            <span className="lux-brand-dot"></span>
-            <span className="lux-footer-logo-text">CAMPUS COIN</span>
-          </span>
+          <img src={logoImg} alt="Campus Coin" className="lux-footer-logo-img" />
           <p>Smart Spending, Student Style.</p>
+          <p className="lux-footer-brand-desc">
+            Campus Coin is a lightweight, student-first budgeting app that makes
+            it effortless to log income, manage expenses, and build better money
+            habits — without spreadsheets or bank logins.
+          </p>
         </div>
 
         <div className="lux-footer-links">
@@ -41,6 +44,29 @@ function Footer() {
           <Link to="/#portfolio">Portfolio</Link>
           <Link to="/#contact">Contact Us</Link>
           <Link to="/login">Login</Link>
+        </div>
+
+        <div className="lux-footer-links">
+          <Link to="/register">Sign Up</Link>
+          <Link to="/forgot-password">Forgot Password</Link>
+          <span className="lux-footer-muted">Student Dashboard</span>
+          <span className="lux-footer-muted">Admin Panel</span>
+        </div>
+
+        <div className="lux-footer-contact">
+          <a href="mailto:hello@campuscoin.app" className="lux-footer-contact-row">
+            <Mail size={14} />
+            hello@campuscoin.app
+          </a>
+          <span className="lux-footer-contact-row">
+            <MapPin size={14} />
+            Built for campuses worldwide
+          </span>
+          <div className="lux-footer-socials">
+            <a href="#" aria-label="Github"><Github size={16} /></a>
+            <a href="#" aria-label="Twitter"><Twitter size={16} /></a>
+            <a href="#" aria-label="LinkedIn"><Linkedin size={16} /></a>
+          </div>
         </div>
       </div>
 

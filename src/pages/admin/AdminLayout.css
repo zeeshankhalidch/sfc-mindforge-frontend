@@ -309,3 +309,16 @@
     padding: 20px 16px;
   }
 }
+.admin-brand-logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.admin-mobile-brand-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}

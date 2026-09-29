@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logoImg from "../../assets/images/tech.png";
 import "./Navbar.css";
 
 function Navbar() {
@@ -11,7 +12,7 @@ function Navbar() {
     <header className="lux-navbar">
       <div className="lux-navbar-inner">
         <Link to="/" className="lux-brand" onClick={close}>
-          <span className="lux-brand-dot"></span>
+          <img src={logoImg} alt="Campus Coin" className="lux-brand-logo" />
           <span className="lux-brand-text">CAMPUS COIN</span>
         </Link>
 

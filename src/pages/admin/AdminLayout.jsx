@@ -14,6 +14,7 @@ import {
   X,
 } from "lucide-react";
 import toast from "react-hot-toast";
+import logoImg from "../../assets/images/tech.png";
 
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import "./AdminLayout.css";
@@ -62,7 +63,7 @@ function AdminLayout() {
         </button>
 
         <div className="admin-mobile-brand">
-          <span className="admin-mobile-brand-mark">CC</span>
+          <img src={logoImg} alt="Campus Coin" className="admin-mobile-brand-img" />
           <span className="admin-mobile-brand-text">Campus Coin</span>
         </div>
       </header>
@@ -70,7 +71,7 @@ function AdminLayout() {
       <aside className={`admin-sidebar ${sidebarOpen ? "admin-sidebar-open" : ""}`}>
         <div className="admin-sidebar-header">
           <div className="admin-brand">
-            <span className="admin-brand-logo">CC</span>
+            <img src={logoImg} alt="Campus Coin" className="admin-brand-logo-img" />
             <div className="admin-brand-text">
               <strong>Campus Coin</strong>
               <span>Administrator</span>

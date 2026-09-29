@@ -12,6 +12,7 @@ import {
   X,
 } from "lucide-react";
 import toast from "react-hot-toast";
+import logoImg from "../../assets/images/tech.png";
 
 import "./Sidebar.css";
 
@@ -42,7 +43,7 @@ function Sidebar({ isOpen, closeSidebar }) {
       <aside className={`sidebar ${isOpen ? "sidebar-open" : ""}`}>
         <div className="sidebar-header">
           <Link to="/dashboard" className="sidebar-brand" onClick={closeSidebar}>
-            <span className="sidebar-logo">CC</span>
+            <img src={logoImg} alt="Campus Coin" className="sidebar-logo-img" />
             <div className="sidebar-brand-text">
               <strong>Campus Coin</strong>
               <small>Student Finance</small>
